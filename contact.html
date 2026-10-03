@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact the Farmstead — Farmer of Life</title>
+  <meta name="description" content="Reach out to the stewards of the Farmer of Life Sanctuary. Inquire about apprenticeships, seasonal retreats, or send a personal missive.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Kantumruy+Pro:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Critical Base Styles: Prevents any white flash, ensures instant botanical dark mode -->
+  <style>
+    :root {
+      --bg-primary: #0a130c;
+      --bg-secondary: #0f1c12;
+      --bg-tertiary: #16281b;
+      --bg-card: rgba(18, 33, 22, 0.75);
+      --bg-card-hover: rgba(26, 48, 32, 0.88);
+      --border-subtle: rgba(72, 187, 120, 0.15);
+      --border-medium: rgba(72, 187, 120, 0.28);
+      --border-bright: rgba(104, 211, 145, 0.45);
+      --accent-primary: #2ecc71;
+      --accent-secondary: #48bb78;
+      --accent-gold: #f39c12;
+      --text-main: #f8fafc;
+      --text-muted: #cbd5e1;
+      --text-gold: #f6c26b;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-display: 'Cinzel', serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    [data-theme="light"] {
+      --bg-primary: #f4fbf5;
+      --bg-secondary: #eaf6ec;
+      --text-main: #0f2415;
+      --text-muted: #33533b;
+    }
+    html, body {
+      background-color: var(--bg-primary, #0a130c) !important;
+      color: var(--text-main, #f0fdf4) !important;
+      font-family: var(--font-sans);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: #2ecc71; text-decoration: none; }
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(10, 19, 12, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+  </style>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="animate.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%B3%3C/text%3E%3C/svg%3E">
+  <script>
+    // Universal image error fallback for GitHub Pages & Local
+    window.addEventListener('error', function(e) {
+      if (e.target && e.target.tagName === 'IMG') {
+        var src = e.target.getAttribute('src');
+        if (src && !e.target.dataset.hasFallenBack) {
+          e.target.dataset.hasFallenBack = 'true';
+          e.target.src = src.indexOf('img/') === 0 ? src.replace('img/', '') : ('img/' + src);
+        }
+      }
+    }, true);
+  </script>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon-wrap"><i class="fas fa-tree"></i></div>
+        <div class="brand-text">Farmer<span>OfLife</span></div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Root Trunk</a>
+        <a href="about.html" class="nav-link">The Farmer</a>
+        <div class="nav-dropdown">
+          <div class="nav-link dropdown-toggle" role="button">
+            <span>Life Pillars</span> <i class="fas fa-chevron-down" style="font-size: 0.75rem;"></i>
+          </div>
+          <div class="dropdown-menu">
+            <a href="soil.html" class="dropdown-item"><i class="fas fa-mountain"></i> 1. Soil & Roots</a>
+            <a href="seeds.html" class="dropdown-item"><i class="fas fa-seedling"></i> 2. Seeds & Intent</a>
+            <a href="growth.html" class="dropdown-item"><i class="fas fa-leaf"></i> 3. Daily Growth</a>
+            <a href="seasons.html" class="dropdown-item"><i class="fas fa-calendar-alt"></i> 4. Life Seasons</a>
+            <a href="community.html" class="dropdown-item"><i class="fas fa-users"></i> 5. Mycorrhizal Tribe</a>
+            <a href="harvest.html" class="dropdown-item"><i class="fas fa-apple-alt"></i> 6. Golden Harvest</a>
+          </div>
+        </div>
+        <a href="testimonial.html" class="nav-link">Testimonials</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+        <a href="call-to-action.html" class="btn-nav-cta"><i class="fas fa-seedling"></i> Begin Cultivation</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme"><i class="fas fa-sun"></i></button>
+        <button class="sound-toggle" id="soundToggle" aria-label="Toggle Sound"><i class="fas fa-volume-mute"></i></button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero Header -->
+  <section class="page-hero">
+    <img src="hero.jpg" alt="Misty valley farmhouse" class="page-hero-bg">
+    <div class="container page-hero-content anim-fade-up">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> <i class="fas fa-chevron-right" style="font-size: 0.65rem;"></i> <span>Contact</span>
+      </div>
+      <span class="section-badge"><i class="fas fa-envelope-open-text"></i> Communication</span>
+      <h1 class="page-hero-title">Send Word to the <em>Farmhouse</em></h1>
+      <p class="page-hero-lead">
+        Whether you have a quiet inquiry, wish to host a seasonal circle in your city, or are seeking mentorship, our wooden gate is always open.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Form & Coordinates -->
+  <section class="section">
+    <div class="container">
+      <div class="content-grid-2col">
+        
+        <!-- Form -->
+        <div style="background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: var(--radius-xl); padding: 3rem; box-shadow: var(--shadow-card);" class="anim-fade-up">
+          <h2 style="font-family: var(--font-serif); font-size: 2.1rem; color: #ffffff; margin-bottom: 0.5rem;">Dispatch a Missive</h2>
+          <p style="color: #cbd5e1; margin-bottom: 1.75rem; font-size: 0.98rem; line-height: 1.65;">
+            We read every message thoughtfully. Expect a human response within two turns of the sun.
+          </p>
+
+          <!-- Quick Select Chips -->
+          <div style="margin-bottom: 1.5rem;">
+            <label style="display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-gold); font-weight: 700; margin-bottom: 0.65rem;">
+              <i class="fas fa-leaf"></i> Select Inquiry Topic
+            </label>
+            <div class="topic-chips" id="topicChips">
+              <button type="button" class="topic-chip active" data-val="circle_hearth"><i class="fas fa-fire-alt"></i> Hearth Council</button>
+              <button type="button" class="topic-chip" data-val="circle_solstice"><i class="fas fa-mountain-sun"></i> Solstice Retreat</button>
+              <button type="button" class="topic-chip" data-val="circle_barn"><i class="fas fa-hands-holding-circle"></i> Barn-Raising</button>
+              <button type="button" class="topic-chip" data-val="mentorship"><i class="fas fa-crown"></i> Elder Mentorship</button>
+              <button type="button" class="topic-chip" data-val="fellowship"><i class="fas fa-scroll"></i> Quiet Fellowship</button>
+            </div>
+          </div>
+
+          <form id="contactForm">
+            <div class="form-group">
+              <label class="form-label" style="color: #ffffff; font-weight: 600;">Full Name</label>
+              <input type="text" id="senderName" class="form-control" placeholder="e.g. Thomas Avery" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" style="color: #ffffff; font-weight: 600;">Email Address</label>
+              <input type="email" id="senderEmail" class="form-control" placeholder="thomas@sanctuary.org" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" style="color: #ffffff; font-weight: 600;">Nature of Your Inquiry</label>
+              <select class="form-control" id="inquirySelect" required>
+                <option value="circle_hearth">Joining The Hearth Council (Mastermind)</option>
+                <option value="circle_solstice">Seasonal Solstice Retreat Seat</option>
+                <option value="circle_barn">Barn-Raising Mutual Aid Network</option>
+                <option value="mentorship">Steward Mentorship Program</option>
+                <option value="speaking">Keynote / Seasonal Solstice Council</option>
+                <option value="fellowship">A Word of Quiet Fellowship</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" style="color: #ffffff; font-weight: 600;">Your Missive</label>
+              <textarea class="form-control" id="senderMessage" placeholder="Speak honestly about your current season, challenges, and inquiry..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+              <i class="fas fa-paper-plane"></i> Release Missive to the Wind
+            </button>
+          </form>
+
+          <!-- Success Receipt Panel -->
+          <div id="formSuccessPanel" style="display: none; background: rgba(14, 28, 19, 0.95); border: 2px solid var(--accent-primary); border-radius: var(--radius-xl); padding: 2.5rem; text-align: center; box-shadow: 0 0 40px rgba(46, 204, 113, 0.25);">
+            <div style="font-size: 3rem; color: var(--accent-gold); margin-bottom: 1rem;"><i class="fas fa-stamp"></i></div>
+            <h3 style="font-family: var(--font-serif); font-size: 1.8rem; color: #ffffff; margin-bottom: 0.5rem;">Missive Sealed & Dispatched</h3>
+            <p style="color: #e2e8f0; font-size: 1rem; line-height: 1.7; max-width: 500px; margin: 0 auto 1.5rem;">
+              Your words have been committed to the forest wind. A steward will reflect upon your missive and reply within two turns of the sun.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+              <a href="https://t.me/kimbunthonICT" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="color: #38bdf8; border-color: rgba(56, 189, 248, 0.4); background: rgba(2, 132, 199, 0.15);"><i class="fab fa-telegram"></i> Follow Up on Telegram</a>
+              <button type="button" class="btn btn-primary btn-sm" onclick="resetMissiveForm()"><i class="fas fa-feather-alt"></i> Send Another Missive</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coordinates -->
+        <div class="anim-fade-in">
+          <span class="section-badge"><i class="fas fa-map-marker-alt"></i> Coordinates</span>
+          <h2 class="section-title">The Sanctuary <em>Meadows</em></h2>
+          <p style="color: var(--text-muted); margin-bottom: 2rem;">
+            We maintain physical orchards in the misty evergreen valleys of the Pacific Northwest, and digital circles worldwide.
+          </p>
+
+          <div class="pillars-grid" style="grid-template-columns: 1fr; gap: 1.25rem;">
+            <div style="background: var(--bg-card); padding: 1.5rem 1.75rem; border-radius: var(--radius-lg); border-left: 4px solid #0284c7; box-shadow: 0 0 25px rgba(2, 132, 199, 0.18); transition: transform 0.3s ease;">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
+                <h4 style="font-family: var(--font-serif); color: #38bdf8; font-size: 1.2rem; margin: 0;"><i class="fab fa-telegram-plane"></i> Direct Telegram Dispatch</h4>
+                <span class="live-status-pill"><span class="pulsing-dot"></span> Steward Online</span>
+              </div>
+              <p style="color: #cbd5e1; font-size: 0.92rem; margin: 0.35rem 0 1.25rem; line-height: 1.6;">Connect directly with the steward for real-time conversation, circle vetting, and fellowship.</p>
+              <a href="https://t.me/kimbunthonICT" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="border-color: #0284c7; color: #38bdf8; background: rgba(2, 132, 199, 0.12); width: 100%; text-align: center; display: inline-flex; justify-content: center; align-items: center; gap: 0.5rem;">
+                <i class="fab fa-telegram"></i> Chat on Telegram (@kimbunthonICT) <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i>
+              </a>
+            </div>
+
+            <div style="background: var(--bg-card); padding: 1.5rem 1.75rem; border-radius: var(--radius-lg); border-left: 4px solid var(--accent-gold); box-shadow: var(--shadow-sm);">
+              <h4 style="font-family: var(--font-serif); color: var(--text-gold); font-size: 1.15rem; margin-bottom: 0.35rem;"><i class="fas fa-compass"></i> Spiritual Haven</h4>
+              <p style="color: #cbd5e1; font-size: 0.92rem; margin: 0; line-height: 1.5;">The Evergreen Valley, Cascade Range, Cascadia</p>
+            </div>
+
+            <div style="background: var(--bg-card); padding: 1.5rem 1.75rem; border-radius: var(--radius-lg); border-left: 4px solid var(--accent-primary); box-shadow: var(--shadow-sm);">
+              <h4 style="font-family: var(--font-serif); color: var(--accent-primary); font-size: 1.15rem; margin-bottom: 0.35rem;"><i class="fas fa-envelope"></i> Digital Telegraph</h4>
+              <p style="color: #cbd5e1; font-size: 0.92rem; margin: 0; line-height: 1.5;">stewards@farmeroflife.org</p>
+            </div>
+
+            <div style="background: var(--bg-card); padding: 1.5rem 1.75rem; border-radius: var(--radius-lg); border-left: 4px solid #3498db; box-shadow: var(--shadow-sm);">
+              <h4 style="font-family: var(--font-serif); color: #38bdf8; font-size: 1.15rem; margin-bottom: 0.35rem;"><i class="fas fa-sun"></i> Working Hours</h4>
+              <p style="color: #cbd5e1; font-size: 0.92rem; margin: 0; line-height: 1.5;">From First Light until Twilight. Screen-free on the Sabbath.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="container" style="max-width: 860px;">
+      <div class="section-title-wrap">
+        <span class="section-badge"><i class="fas fa-question-circle"></i> Wisdom Clarified</span>
+        <h2 class="section-title">Frequently Asked <em>Questions</em></h2>
+        <p class="section-subtitle">
+          Inquiries from practitioners navigating the intersection of natural law and modern reality.
+        </p>
+      </div>
+
+      <div class="accordion">
+        
+        <div class="accordion-item active">
+          <div class="accordion-header">
+            <span>Is the Farmer of Life a religion or a productivity system?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="accordion-body">
+            Neither. It is an existential philosophy rooted in bio-mimicry and natural law. Rather than viewing humans as industrial factories that must maximize continuous output, we view humans as living organisms whose highest flourishing requires honoring the soil, seasons, pruning, and rest.
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Can I apply this if I work in a high-stress corporate job?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="accordion-body">
+            Yes, especially then. The corporate world often operates on an illusion of continuous summer. By implementing the Law of the Soil (protecting sleep and morning silence) and the Law of Pruning (saying ruthless no to trivial meetings), you become the most grounded, effective person in the organization.
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>How can I honor Winter if my life demands constant results?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="accordion-body">
+            Winter does not mean abandoning all responsibility; it means matching your inner intensity to your energy. You can operate in "maintenance mode" on routine tasks while refusing to start new monumental creative initiatives until your sap returns in Spring. Micro-winters (taking an entire weekend completely screen-free) also offer deep restoration.
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>How do I start my own local Cultivator Circle?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="accordion-body">
+            Download our free Cultivator Circle Field Guide via the Starter Pack on the next page. Gather three to five earnest friends once a month around a simple dinner or fire pit, and read the seasonal reflections together.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-icon-wrap"><i class="fas fa-tree"></i></div>
+            <div class="brand-text">Farmer<span>OfLife</span></div>
+          </a>
+          <p>An existential sanctuary honoring natural cycles, timeless wisdom, and organic human growth.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Life Pillars</h4>
+          <div class="footer-links">
+            <a href="soil.html">1. Soil & Roots</a>
+            <a href="seeds.html">2. Seeds of Intent</a>
+            <a href="growth.html">3. Daily Growth</a>
+            <a href="seasons.html">4. Life Seasons</a>
+            <a href="community.html">5. Community</a>
+            <a href="harvest.html">6. Golden Harvest</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Sanctuary</h4>
+          <div class="footer-links">
+            <a href="about.html">The Philosophy</a>
+            <a href="testimonial.html">Cultivator Stories</a>
+            <a href="contact.html" class="active">Send Word</a>
+            <a href="call-to-action.html">The Covenant</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Cultivator Pledge</h4>
+          <a href="call-to-action.html" class="btn btn-gold btn-sm"><i class="fas fa-scroll"></i> Seal the Covenant</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Farmer of Life Sanctuary. All rights reserved.</div>
+        <a href="#siteHeader">Back to Top <i class="fas fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    // Topic Chips & Select Sync
+    const topicChips = document.querySelectorAll('.topic-chip');
+    const inquirySelect = document.getElementById('inquirySelect');
+
+    topicChips.forEach(chip => {
+      chip.addEventListener('click', function() {
+        topicChips.forEach(c => c.classList.remove('active'));
+        this.classList.add('active');
+        const val = this.getAttribute('data-val');
+        if (inquirySelect) inquirySelect.value = val;
+        if (window.soundEngine) window.soundEngine.playNodeChime();
+      });
+    });
+
+    if (inquirySelect) {
+      inquirySelect.addEventListener('change', function() {
+        const val = this.value;
+        topicChips.forEach(c => {
+          c.classList.toggle('active', c.getAttribute('data-val') === val);
+        });
+      });
+    }
+
+    // Auto-select from URL params (?inquiry=circle_hearth etc.)
+    const urlParams = new URLSearchParams(window.location.search);
+    const inq = urlParams.get('inquiry') || urlParams.get('circle');
+    if (inq) {
+      let targetVal = inq;
+      if (inq === 'hearth') targetVal = 'circle_hearth';
+      if (inq === 'retreat' || inq === 'solstice') targetVal = 'circle_solstice';
+      if (inq === 'barn') targetVal = 'circle_barn';
+
+      if (inquirySelect) {
+        inquirySelect.value = targetVal;
+        topicChips.forEach(c => {
+          c.classList.toggle('active', c.getAttribute('data-val') === targetVal);
+        });
+      }
+      setTimeout(() => {
+        document.getElementById('contactForm')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 300);
+    }
+
+    // Form Submit Flow
+    document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('contactForm').style.display = 'none';
+      document.getElementById('formSuccessPanel').style.display = 'block';
+      if (window.showToast) window.showToast('Your missive has been committed to the forest wind.', '✉️');
+      if (window.soundEngine) window.soundEngine.playNodeChime();
+    });
+
+    function resetMissiveForm() {
+      document.getElementById('contactForm').reset();
+      document.getElementById('contactForm').style.display = 'block';
+      document.getElementById('formSuccessPanel').style.display = 'none';
+    }
+  </script>
+  <!-- Floating Sanctuary Audio & Canopy HUD -->
+  <div class="sanctuary-hud" id="sanctuaryHUD" role="region" aria-label="Sanctuary Ambience Controls">
+    <button class="hud-sound-btn" id="hudSoundBtn" title="Toggle Forest Wind Ambience">
+      <div class="hud-equalizer" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <span class="hud-sound-text">Forest Sound</span>
+    </button>
+    <button class="hud-scroll-top" id="hudScrollTop" title="Return to Canopy" aria-label="Return to Canopy">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </div>
+</body>
+</html>

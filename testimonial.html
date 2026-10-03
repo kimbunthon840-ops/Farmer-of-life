@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cultivator Testimonials — Stories from the Field | Farmer of Life</title>
+  <meta name="description" content="Read transformative reflections from leaders, artists, and cultivators who walked away from toxic hustle and discovered organic human peace.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Kantumruy+Pro:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Critical Base Styles: Prevents any white flash, ensures instant botanical dark mode -->
+  <style>
+    :root {
+      --bg-primary: #0a130c;
+      --bg-secondary: #0f1c12;
+      --bg-tertiary: #16281b;
+      --bg-card: rgba(18, 33, 22, 0.75);
+      --bg-card-hover: rgba(26, 48, 32, 0.88);
+      --border-subtle: rgba(72, 187, 120, 0.15);
+      --border-medium: rgba(72, 187, 120, 0.28);
+      --border-bright: rgba(104, 211, 145, 0.45);
+      --accent-primary: #2ecc71;
+      --accent-secondary: #48bb78;
+      --accent-gold: #f39c12;
+      --text-main: #f8fafc;
+      --text-muted: #cbd5e1;
+      --text-gold: #f6c26b;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-display: 'Cinzel', serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    [data-theme="light"] {
+      --bg-primary: #f4fbf5;
+      --bg-secondary: #eaf6ec;
+      --text-main: #0f2415;
+      --text-muted: #33533b;
+    }
+    html, body {
+      background-color: var(--bg-primary, #0a130c) !important;
+      color: var(--text-main, #f0fdf4) !important;
+      font-family: var(--font-sans);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: #2ecc71; text-decoration: none; }
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(10, 19, 12, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+  </style>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="animate.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%B3%3C/text%3E%3C/svg%3E">
+  <script>
+    // Universal image error fallback for GitHub Pages & Local
+    window.addEventListener('error', function(e) {
+      if (e.target && e.target.tagName === 'IMG') {
+        var src = e.target.getAttribute('src');
+        if (src && !e.target.dataset.hasFallenBack) {
+          e.target.dataset.hasFallenBack = 'true';
+          e.target.src = src.indexOf('img/') === 0 ? src.replace('img/', '') : ('img/' + src);
+        }
+      }
+    }, true);
+  </script>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon-wrap"><i class="fas fa-tree"></i></div>
+        <div class="brand-text">Farmer<span>OfLife</span></div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Root Trunk</a>
+        <a href="about.html" class="nav-link">The Farmer</a>
+        <div class="nav-dropdown">
+          <div class="nav-link dropdown-toggle" role="button">
+            <span>Life Pillars</span> <i class="fas fa-chevron-down" style="font-size: 0.75rem;"></i>
+          </div>
+          <div class="dropdown-menu">
+            <a href="soil.html" class="dropdown-item"><i class="fas fa-mountain"></i> 1. Soil & Roots</a>
+            <a href="seeds.html" class="dropdown-item"><i class="fas fa-seedling"></i> 2. Seeds & Intent</a>
+            <a href="growth.html" class="dropdown-item"><i class="fas fa-leaf"></i> 3. Daily Growth</a>
+            <a href="seasons.html" class="dropdown-item"><i class="fas fa-calendar-alt"></i> 4. Life Seasons</a>
+            <a href="community.html" class="dropdown-item"><i class="fas fa-users"></i> 5. Mycorrhizal Tribe</a>
+            <a href="harvest.html" class="dropdown-item"><i class="fas fa-apple-alt"></i> 6. Golden Harvest</a>
+          </div>
+        </div>
+        <a href="testimonial.html" class="nav-link active">Testimonials</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="call-to-action.html" class="btn-nav-cta"><i class="fas fa-seedling"></i> Begin Cultivation</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme"><i class="fas fa-sun"></i></button>
+        <button class="sound-toggle" id="soundToggle" aria-label="Toggle Sound"><i class="fas fa-volume-mute"></i></button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero Header -->
+  <section class="page-hero">
+    <img src="hero.jpg" alt="Ancient forest grove" class="page-hero-bg">
+    <div class="container page-hero-content anim-fade-up">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> <i class="fas fa-chevron-right" style="font-size: 0.65rem;"></i> <span>Cultivator Testimonials</span>
+      </div>
+      <span class="section-badge"><i class="fas fa-comments"></i> Voices of the Soil</span>
+      <h1 class="page-hero-title">Stories from the <em>Cultivators Circle</em></h1>
+      <p class="page-hero-lead">
+        Real reflections from founders, writers, healers, and craftsmen who stepped off the frantic treadmill of artificial speed 
+        and anchored their lives in the rhythm of the soil.
+      </p>
+    </div>
+  </section>
+
+  <!-- Testimonials Grid -->
+  <section class="section">
+    <div class="container">
+      <div class="pillars-grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
+        
+        <!-- Story 1 -->
+        <div class="pillar-card" style="--card-accent: #2ecc71;">
+          <div style="display: flex; gap: 0.25rem; color: var(--accent-gold); margin-bottom: 1rem;">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p style="font-style: italic; color: var(--text-main); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem;">
+            "Before discovering the Farmer of Life, I was having chest pains from 80-hour weeks at my design firm. 
+            Understanding the Law of the Soil changed everything. I stopped cramming, protected my sleep, and pruned half of our unprofitable client noise. 
+            Today, our architectural studio creates the best work in our history, and I am home for dinner with my daughters every evening."
+          </p>
+          <div style="display: flex; align-items: center; gap: 1rem; border-top: 1px solid var(--border-subtle); padding-top: 1rem;">
+            <div style="width: 48px; height: 48px; border-radius: 50%; background: #1f402b; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--accent-primary);">
+              EV
+            </div>
+            <div>
+              <h4 style="font-family: var(--font-serif); font-size: 1.05rem; color: var(--text-main);">Elena Vance</h4>
+              <p style="font-size: 0.8rem; color: var(--accent-gold); text-transform: uppercase;">Principal Architect & Studio Founder</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 2 -->
+        <div class="pillar-card" style="--card-accent: #e67e22;">
+          <div style="display: flex; gap: 0.25rem; color: var(--accent-gold); margin-bottom: 1rem;">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p style="font-style: italic; color: var(--text-main); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem;">
+            "The lesson of Winter Dormancy literally saved my sanity. As a software engineer, I felt guilty whenever I wasn't typing code or shipping commits. 
+            The Farmer taught me that the roots gather their deepest sap in the quiet cold. 
+            When I gave myself permission to rest deeply for two months, my next open-source project virtually wrote itself in a burst of Spring clarity."
+          </p>
+          <div style="display: flex; align-items: center; gap: 1rem; border-top: 1px solid var(--border-subtle); padding-top: 1rem;">
+            <div style="width: 48px; height: 48px; border-radius: 50%; background: #3b2a1a; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--accent-gold);">
+              MT
+            </div>
+            <div>
+              <h4 style="font-family: var(--font-serif); font-size: 1.05rem; color: var(--text-main);">Marcus Thorne</h4>
+              <p style="font-size: 0.8rem; color: var(--accent-gold); text-transform: uppercase;">Senior Systems Architect & Author</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 3 -->
+        <div class="pillar-card" style="--card-accent: #3498db;">
+          <div style="display: flex; gap: 0.25rem; color: var(--accent-gold); margin-bottom: 1rem;">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p style="font-style: italic; color: var(--text-main); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem;">
+            "In modern medicine, we spend immense resources suppressing symptoms while completely ignoring the soil that produced the disease. 
+            Applying the 6 Pillars of Life Cultivation to my integrative clinic transformed how I heal patients. 
+            You cannot force vitality; you must cultivate the conditions in which health is inevitable."
+          </p>
+          <div style="display: flex; align-items: center; gap: 1rem; border-top: 1px solid var(--border-subtle); padding-top: 1rem;">
+            <div style="width: 48px; height: 48px; border-radius: 50%; background: #162c3d; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #3498db;">
+              SC
+            </div>
+            <div>
+              <h4 style="font-family: var(--font-serif); font-size: 1.05rem; color: var(--text-main);">Dr. Sarah Chen, MD</h4>
+              <p style="font-size: 0.8rem; color: var(--accent-gold); text-transform: uppercase;">Integrative Physician & Speaker</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Submit Story Form -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="container" style="max-width: 820px;">
+      <div class="section-title-wrap">
+        <span class="section-badge"><i class="fas fa-feather"></i> Your Harvest</span>
+        <h2 class="section-title">Share Your <em>Field Report</em></h2>
+        <p class="section-subtitle">
+          How has shifting from hustle to natural cultivation shifted your ground? We feature thoughtful submissions in our Sunday Seed Almanack.
+        </p>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: var(--radius-xl); padding: 3rem; box-shadow: var(--shadow-card);">
+        <form id="storyForm">
+          <div class="form-group">
+            <label class="form-label">Your Name & Vocation</label>
+            <input type="text" class="form-control" placeholder="e.g. Julian Hayes, Woodworker & Mentor" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Which Pillar Shifted Your Life Most?</label>
+            <select class="form-control">
+              <option>Pillar 1: Soil & Roots (Restoring Biology & Mental Peace)</option>
+              <option>Pillar 2: Seeds of Intent (Choosing Authentic Desires)</option>
+              <option>Pillar 3: Daily Growth & Pruning (Cutting Commitments)</option>
+              <option>Pillar 4: Life Seasons (Honoring Winter Dormancy)</option>
+              <option>Pillar 5: Community (The Underground Root Web)</option>
+              <option>Pillar 6: Golden Harvest (Mindful Celebration)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Your Story & Transformation</label>
+            <textarea class="form-control" placeholder="Describe the shift in your daily experience..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+            <i class="fas fa-paper-plane"></i> Send Field Report to the Granary
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-icon-wrap"><i class="fas fa-tree"></i></div>
+            <div class="brand-text">Farmer<span>OfLife</span></div>
+          </a>
+          <p>An existential sanctuary honoring natural cycles, timeless wisdom, and organic human growth.</p>
+          <div class="social-links" style="display: flex; gap: 0.75rem; margin-top: 1rem;">
+            <a href="https://t.me/kimbunthonICT" target="_blank" rel="noopener noreferrer" class="social-link" title="Telegram (@kimbunthonICT)" aria-label="Telegram" style="background: rgba(2, 132, 199, 0.2); color: #38bdf8; border-color: rgba(2, 132, 199, 0.45);"><i class="fab fa-telegram-plane"></i></a>
+            <a href="#" class="social-link" title="Forest Podcast" aria-label="Podcast"><i class="fas fa-podcast"></i></a>
+            <a href="#" class="social-link" title="Community Forum" aria-label="Community"><i class="fas fa-seedling"></i></a>
+            <a href="contact.html" class="social-link" title="Contact Us" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Life Pillars</h4>
+          <div class="footer-links">
+            <a href="soil.html">1. Soil & Roots</a>
+            <a href="seeds.html">2. Seeds of Intent</a>
+            <a href="growth.html">3. Daily Growth</a>
+            <a href="seasons.html">4. Life Seasons</a>
+            <a href="community.html">5. Community</a>
+            <a href="harvest.html">6. Golden Harvest</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Sanctuary</h4>
+          <div class="footer-links">
+            <a href="about.html">The Philosophy</a>
+            <a href="testimonial.html" class="active">Cultivator Stories</a>
+            <a href="contact.html">Send Word</a>
+            <a href="call-to-action.html">The Covenant</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Action</h4>
+          <a href="call-to-action.html" class="btn btn-gold btn-sm"><i class="fas fa-certificate"></i> Take the Pledge</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Farmer of Life Sanctuary. All rights reserved.</div>
+        <a href="#siteHeader">Back to Top <i class="fas fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    document.getElementById('storyForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      window.showToast('Your Field Report has been received with gratitude.', '📜');
+      if (window.soundEngine) window.soundEngine.playNodeChime();
+      this.reset();
+    });
+  </script>
+  <!-- Floating Sanctuary Audio & Canopy HUD -->
+  <div class="sanctuary-hud" id="sanctuaryHUD" role="region" aria-label="Sanctuary Ambience Controls">
+    <button class="hud-sound-btn" id="hudSoundBtn" title="Toggle Forest Wind Ambience">
+      <div class="hud-equalizer" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <span class="hud-sound-text">Forest Sound</span>
+    </button>
+    <button class="hud-scroll-top" id="hudScrollTop" title="Return to Canopy" aria-label="Return to Canopy">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </div>
+</body>
+</html>

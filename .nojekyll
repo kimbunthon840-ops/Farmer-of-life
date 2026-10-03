@@ -1,0 +1,2 @@
+# Bypass Jekyll processing on GitHub Pages
+# This file prevents GitHub Pages from running Jekyll, ensuring all static files, CSS, JS, and images are served directly without build errors.

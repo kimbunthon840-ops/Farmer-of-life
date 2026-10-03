@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farmer of Life — Cultivate Your Existence Like a Living Tree</title>
+  <meta name="description" content="A philosophical and practical sanctuary for living intentionally. Stop frantic hustling and cultivate your life like a master farmer: soil, seeds, daily growth, seasons, and harvest.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Kantumruy+Pro:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Critical Base Styles: Prevents any white flash, ensures instant botanical dark mode -->
+  <style>
+    :root {
+      --bg-primary: #0a130c;
+      --bg-secondary: #0f1c12;
+      --bg-tertiary: #16281b;
+      --bg-card: rgba(18, 33, 22, 0.75);
+      --bg-card-hover: rgba(26, 48, 32, 0.88);
+      --border-subtle: rgba(72, 187, 120, 0.15);
+      --border-medium: rgba(72, 187, 120, 0.28);
+      --border-bright: rgba(104, 211, 145, 0.45);
+      --accent-primary: #2ecc71;
+      --accent-secondary: #48bb78;
+      --accent-gold: #f39c12;
+      --text-main: #f8fafc;
+      --text-muted: #cbd5e1;
+      --text-gold: #f6c26b;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-display: 'Cinzel', serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    [data-theme="light"] {
+      --bg-primary: #f4fbf5;
+      --bg-secondary: #eaf6ec;
+      --text-main: #0f2415;
+      --text-muted: #33533b;
+    }
+    html, body {
+      background-color: var(--bg-primary, #0a130c) !important;
+      color: var(--text-main, #f0fdf4) !important;
+      font-family: var(--font-sans);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: #2ecc71; text-decoration: none; }
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(10, 19, 12, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+  </style>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="animate.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%B3%3C/text%3E%3C/svg%3E">
+  <script>
+    // Universal image error fallback for GitHub Pages & Local
+    window.addEventListener('error', function(e) {
+      if (e.target && e.target.tagName === 'IMG') {
+        var src = e.target.getAttribute('src');
+        if (src && !e.target.dataset.hasFallenBack) {
+          e.target.dataset.hasFallenBack = 'true';
+          e.target.src = src.indexOf('img/') === 0 ? src.replace('img/', '') : ('img/' + src);
+        }
+      }
+    }, true);
+  </script>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Farmer of Life Homepage">
+        <div class="brand-icon-wrap">
+          <i class="fas fa-tree"></i>
+        </div>
+        <div class="brand-text">
+          Farmer<span>OfLife</span>
+        </div>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Root Trunk</a>
+        <a href="about.html" class="nav-link">The Farmer</a>
+
+        <!-- Life Pillars Dropdown -->
+        <div class="nav-dropdown">
+          <div class="nav-link dropdown-toggle" role="button" tabindex="0">
+            <span>Life Pillars</span> <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 2px;"></i>
+          </div>
+          <div class="dropdown-menu">
+            <a href="soil.html" class="dropdown-item"><i class="fas fa-mountain"></i> 1. Soil & Roots</a>
+            <a href="seeds.html" class="dropdown-item"><i class="fas fa-seedling"></i> 2. Seeds & Intent</a>
+            <a href="growth.html" class="dropdown-item"><i class="fas fa-leaf"></i> 3. Daily Growth</a>
+            <a href="seasons.html" class="dropdown-item"><i class="fas fa-calendar-alt"></i> 4. Life Seasons</a>
+            <a href="community.html" class="dropdown-item"><i class="fas fa-users"></i> 5. Mycorrhizal Tribe</a>
+            <a href="harvest.html" class="dropdown-item"><i class="fas fa-apple-alt"></i> 6. Golden Harvest</a>
+          </div>
+        </div>
+
+        <a href="testimonial.html" class="nav-link">Testimonials</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="call-to-action.html" class="btn-nav-cta"><i class="fas fa-seedling"></i> Begin Cultivation</a>
+      </nav>
+
+      <!-- Nav Action Controls -->
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" title="Toggle Nature Lighting Mode" aria-label="Toggle Theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <button class="sound-toggle" id="soundToggle" title="Forest Breeze Ambience" aria-label="Toggle Sound">
+          <i class="fas fa-volume-mute"></i>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with Interactive Tree of Life -->
+  <section class="hero-section">
+    <div class="hero-bg-overlay"></div>
+    <div class="container hero-grid">
+      
+      <!-- Hero Narrative -->
+      <div class="hero-content anim-fade-up">
+        <span class="section-badge"><i class="fas fa-leaf"></i> The Art of Living by Natural Law</span>
+        <h1 class="hero-title">
+          Stop frantic sprinting. <br>
+          <span class="highlight-green">Cultivate your life</span> like a <span class="highlight-gold">master farmer</span>.
+        </h1>
+        <p class="hero-description">
+          Modern existence urges you to hurry, force, and exhaust your spirit. 
+          The Tree of Life teaches an older, unshakeable truth: you cannot pull a sprout to make it grow faster. 
+          Tend the soil, plant true seeds, honor the seasons, and let abundance emerge naturally.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#interactiveTreeSection" class="btn btn-primary btn-lg">
+            <i class="fas fa-compass"></i> Explore The Tree of Life
+          </a>
+          <a href="call-to-action.html" class="btn btn-gold btn-lg">
+            <i class="fas fa-seedling"></i> Join Cultivators Circle
+          </a>
+        </div>
+
+        <!-- Vital Statistics -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h4>7 Laws</h4>
+            <p>Ancient Principles</p>
+          </div>
+          <div class="stat-item">
+            <h4>6 Pillars</h4>
+            <p>Root to Harvest</p>
+          </div>
+          <div class="stat-item">
+            <h4>100%</h4>
+            <p>Organic Living</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Interactive Tree Canvas Card -->
+      <div class="tree-showcase-card anim-fade-in" id="interactiveTreeSection">
+        <div class="tree-card-header">
+          <div class="tree-header-top">
+            <div class="tree-status-badge">
+              <div class="pulse-dot"></div>
+              <span>Interactive Tree of Life</span>
+            </div>
+            <div style="display: flex; gap: 0.4rem;">
+              <button class="tree-action-btn" id="btnTreeTimelapse" title="Cycle all 4 seasons in smooth timelapse">
+                <i class="fas fa-play"></i> <span>Timelapse</span>
+              </button>
+              <button class="tree-action-btn" id="btnTreeExpand">
+                <i class="fas fa-cut"></i> <span>Prune Branches</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Segmented 4-Season Control Bar -->
+          <div class="tree-seasons-bar">
+            <button class="season-bar-btn btn-season active" data-season="spring">
+              <span class="season-icon">🌸</span> <span>Spring</span>
+            </button>
+            <button class="season-bar-btn btn-season" data-season="summer">
+              <span class="season-icon">☀️</span> <span>Summer</span>
+            </button>
+            <button class="season-bar-btn btn-season" data-season="autumn">
+              <span class="season-icon">🍂</span> <span>Autumn</span>
+            </button>
+            <button class="season-bar-btn btn-season" data-season="winter">
+              <span class="season-icon">❄️</span> <span>Winter</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Canvas Container -->
+        <div class="tree-canvas-wrapper">
+          <canvas id="treeCanvas"></canvas>
+          
+          <!-- Interactive Node Floating Card -->
+          <div class="tree-info-overlay" id="treeInfoOverlay">
+            <div class="tree-info-text">
+              <h4 id="treeNodeTitle">🌱 Explore the Nodes</h4>
+              <p id="treeNodeDesc">Hover or tap any glowing branch node above to discover its wisdom.</p>
+            </div>
+            <a href="seeds.html" class="btn btn-sm btn-gold" id="treeNodeLink">
+              Cultivate Now →
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Running Text Marquee Ticker (អក្សររត់) -->
+  <div class="ticker-banner" aria-label="Wisdom running text ticker">
+    <div class="ticker-wrap">
+      <div class="ticker-track">
+        <!-- Set 1 -->
+        <div class="ticker-item">
+          <i class="fas fa-seedling"></i>
+          <span class="ticker-khmer">ដាំគ្រាប់ពូជនៃសេចក្តីល្អ</span>
+          <span class="ticker-en">— Plant Seeds of Goodness</span>
+          <span class="ticker-separator">✦</span>
+        </div>
+        <div class="ticker-item">
+          <i class="fas fa-mountain"></i>
+          <span class="ticker-khmer">ថែរក្សាដីនៃជីវិត</span>
+          <span class="ticker-en">— Nurture the Soil of Life</span>
+          <span class="ticker-separator">✦</span>
+        </div>
+        <div class="ticker-item">
+          <i class="fas fa-calendar-alt"></i>
+          <span class="ticker-khmer">គោរពរដូវកាលនៃធម្មជាតិ</span>
+          <span class="ticker-en">— Respect Natural Seasons</span>
+          <span class="ticker-separator">✦</span>
+        </div>
+        <div class="ticker-item">
+          <i class="fas fa-hourglass-half"></i>
+          <span class="ticker-khmer">អត់ធ្មត់ក្នុងការលូតលាស់</span>
+          <span class="ticker-en">— Growth Demands Sacred Patience</span>
+          <span class="ticker-separator">✦</span>
+        </div>
+        <div class="ticker-item">
+          <i class="fas fa-apple-alt"></i>
+          <span class="ticker-khmer">ចែករំលែកផលប្រមូលផលជាមួយសហគមន៍</span>
+          <span class="ticker-en">— Share the Golden Harvest</span>
+          <span class="ticker-separator">✦</span>
+        </div>
+        <div class="ticker-item">
+          <i class="fas fa-spa"></i>
+          <span class="ticker-khmer">ឈប់ប្រញាប់ប្រញាល់ រៀនរស់តាមច្បាប់ធម្មជាតិ</span>
+          <span class="ticker-en">— Stop Rushing, Cultivate Existence</span>
+          <span class="ticker-separator">✦</span>
+        </div>
+        <div class="ticker-item">
+          <i class="fas fa-tree"></i>
+          <span class="ticker-khmer">ដើមឈើធំកើតចេញពីគ្រាប់ពូជតូចមួយ</span>
+          <span class="ticker-en">— Mighty Oaks from Little Acorns Grow</span>
+          <span class="ticker-separator">✦</span>
+        </div>
+
+        <!-- Set 2 (Duplicate for Seamless Loop) -->
+        <div class="ticker-item">
+          <i class="fas fa-seedling"></i>
+          <span class="ticker-khmer">ដាំគ្រាប់ពូជនៃសេចក្តីល្អ</span>
+          <span class="ticker-en">— Plant Seeds of Goodness</span>
+          <span class="ticker-separator">✦</span>
+        </div>
+        <div class="ticker-item">
+          <i class="fas fa-mountain"></i>
+          <span class="ticker-khmer">ថែរក្សាដីនៃជីវិត</span>
+          <span class="ticker-en">— Nurture the Soil of Life</span>
+          <span class="ticker-separator">✦</span>
+        </div>
+        <div class="ticker-item">
+          <i class="fas fa-calendar-alt"></i>
+          <span class="ticker-khmer">គោរពរដូវកាលនៃធម្មជាតិ</span>
+          <span class="ticker-en">— Respect Natural Seasons</span>
+          <span class="ticker-separator">✦</span>
+        </div>
+        <div class="ticker-item">
+          <i class="fas fa-hourglass-half"></i>
+          <span class="ticker-khmer">អត់ធ្មត់ក្នុងការលូតលាស់</span>
+          <span class="ticker-en">— Growth Demands Sacred Patience</span>
+          <span class="ticker-separator">✦</span>
+        </div>
+        <div class="ticker-item">
+          <i class="fas fa-apple-alt"></i>
+          <span class="ticker-khmer">ចែករំលែកផលប្រមូលផលជាមួយសហគមន៍</span>
+          <span class="ticker-en">— Share the Golden Harvest</span>
+          <span class="ticker-separator">✦</span>
+        </div>
+        <div class="ticker-item">
+          <i class="fas fa-spa"></i>
+          <span class="ticker-khmer">ឈប់ប្រញាប់ប្រញាល់ រៀនរស់តាមច្បាប់ធម្មជាតិ</span>
+          <span class="ticker-en">— Stop Rushing, Cultivate Existence</span>
+          <span class="ticker-separator">✦</span>
+        </div>
+        <div class="ticker-item">
+          <i class="fas fa-tree"></i>
+          <span class="ticker-khmer">ដើមឈើធំកើតចេញពីគ្រាប់ពូជតូចមួយ</span>
+          <span class="ticker-en">— Mighty Oaks from Little Acorns Grow</span>
+          <span class="ticker-separator">✦</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- The 6 Pillars of Life Cultivation Section -->
+  <section class="section" id="pillarsSection">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-badge"><i class="fas fa-sitemap"></i> The Living Anatomy</span>
+        <h2 class="section-title">The Six Pillars of the <em>Cultivated Life</em></h2>
+        <p class="section-subtitle">
+          From deep invisible underground roots to the canopy bearing golden fruit, 
+          each pillar corresponds to a vital dimension of your existence.
+        </p>
+      </div>
+
+      <div class="pillars-grid">
+        
+        <!-- 1. Soil & Roots -->
+        <article class="pillar-card" style="--card-bg-img: url('soil.jpg'); --card-accent: #b27b46;">
+          <div class="pillar-card-media">
+            <img src="soil.jpg" alt="Dark rich mineral soil in cupped hands">
+            <span class="pillar-order-badge">01 / ROOTS</span>
+          </div>
+          <div class="pillar-card-body">
+            <div class="pillar-icon-header">
+              <div class="pillar-icon-box" style="background: rgba(178, 123, 70, 0.2); color: #d4883b; border-color: rgba(178, 123, 70, 0.45);">
+                <i class="fas fa-mountain"></i>
+              </div>
+              <span style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: #d4883b; font-weight: 700;">Foundation</span>
+            </div>
+            <h3>The Soil & Roots</h3>
+            <div class="pillar-role">Health, Habits & Biology</div>
+            <p>
+              No magnificent oak stands without deep subterranean anchorage. Replenish your physical vitality, restore circadian sleep, and detoxify your mental topsoil.
+            </p>
+            <div class="pillar-focus-tags">
+              <span class="focus-tag"><i class="fas fa-check-circle"></i> Restorative Sleep</span>
+              <span class="focus-tag"><i class="fas fa-check-circle"></i> Information Fasting</span>
+              <span class="focus-tag"><i class="fas fa-check-circle"></i> Biological Grounding</span>
+            </div>
+            <a href="soil.html" class="pillar-link">
+              <span>Tend Your Soil</span> <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- 2. Seeds & Intent -->
+        <article class="pillar-card" style="--card-bg-img: url('seeds.jpg'); --card-accent: #48bb78;">
+          <div class="pillar-card-media">
+            <img src="seeds.jpg" alt="Golden glowing seeds in warm sunlight">
+            <span class="pillar-order-badge">02 / GERMINATION</span>
+          </div>
+          <div class="pillar-card-body">
+            <div class="pillar-icon-header">
+              <div class="pillar-icon-box" style="background: rgba(72, 187, 120, 0.2); color: #48bb78; border-color: rgba(72, 187, 120, 0.45);">
+                <i class="fas fa-seedling"></i>
+              </div>
+              <span style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: #48bb78; font-weight: 700;">Genesis</span>
+            </div>
+            <h3>Seeds of Intent</h3>
+            <div class="pillar-role">Ideas, Goals & True Aspirations</div>
+            <p>
+              You only harvest what you plant. Distinguish between authentic heirloom desires that nourish the soul and invasive vanity weeds scattered by external consensus.
+            </p>
+            <div class="pillar-focus-tags">
+              <span class="focus-tag"><i class="fas fa-check-circle"></i> Heirloom Goals</span>
+              <span class="focus-tag"><i class="fas fa-check-circle"></i> Screen-Free Incubation</span>
+              <span class="focus-tag"><i class="fas fa-check-circle"></i> Soul Vocation</span>
+            </div>
+            <a href="seeds.html" class="pillar-link">
+              <span>Select Your Seeds</span> <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- 3. Daily Growth -->
+        <article class="pillar-card" style="--card-bg-img: url('growth.jpg'); --card-accent: #2ecc71;">
+          <div class="pillar-card-media">
+            <img src="growth.jpg" alt="Fresh green sprout drinking morning dew">
+            <span class="pillar-order-badge">03 / CULTIVATION</span>
+          </div>
+          <div class="pillar-card-body">
+            <div class="pillar-icon-header">
+              <div class="pillar-icon-box" style="background: rgba(46, 204, 113, 0.2); color: #2ecc71; border-color: rgba(46, 204, 113, 0.45);">
+                <i class="fas fa-sun"></i>
+              </div>
+              <span style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: #2ecc71; font-weight: 700;">Daily Rhythm</span>
+            </div>
+            <h3>Daily Growth & Pruning</h3>
+            <div class="pillar-role">Discipline, Progress & Focus</div>
+            <p>
+              Great trees grow through gentle, unrelenting daily watering and courageous pruning. Channel your vital energy by cutting away dead commitments.
+            </p>
+            <div class="pillar-focus-tags">
+              <span class="focus-tag"><i class="fas fa-check-circle"></i> 1% Daily Rain</span>
+              <span class="focus-tag"><i class="fas fa-check-circle"></i> Courageous Pruning</span>
+              <span class="focus-tag"><i class="fas fa-check-circle"></i> Deep Attention</span>
+            </div>
+            <a href="growth.html" class="pillar-link">
+              <span>Nurture Growth</span> <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- 4. Seasons of Life -->
+        <article class="pillar-card" style="--card-bg-img: url('seasons.jpg'); --card-accent: #e67e22;">
+          <div class="pillar-card-media">
+            <img src="seasons.jpg" alt="Natural cycle of the four seasons">
+            <span class="pillar-order-badge">04 / RHYTHMS</span>
+          </div>
+          <div class="pillar-card-body">
+            <div class="pillar-icon-header">
+              <div class="pillar-icon-box" style="background: rgba(230, 126, 34, 0.2); color: #e67e22; border-color: rgba(230, 126, 34, 0.45);">
+                <i class="fas fa-wind"></i>
+              </div>
+              <span style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: #e67e22; font-weight: 700;">Cycles</span>
+            </div>
+            <h3>The Seasons of Life</h3>
+            <div class="pillar-role">Journal & Timeline of Stages</div>
+            <p>
+              Nature never demands summer in the dead of winter. Learn to diagnose your current life season—Spring sowing, Summer toil, Autumn harvest, or Winter rest.
+            </p>
+            <div class="pillar-focus-tags">
+              <span class="focus-tag"><i class="fas fa-check-circle"></i> Winter Renewal</span>
+              <span class="focus-tag"><i class="fas fa-check-circle"></i> Summer Vigilance</span>
+              <span class="focus-tag"><i class="fas fa-check-circle"></i> Seasonal Patience</span>
+            </div>
+            <a href="seasons.html" class="pillar-link">
+              <span>Read Your Season</span> <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- 5. Community -->
+        <article class="pillar-card" style="--card-bg-img: url('farmers-harvest.jpg'); --card-accent: #e84393;">
+          <div class="pillar-card-media">
+            <img src="farmers-harvest.jpg" alt="Smiling farmers holding fresh harvest baskets in community garden">
+            <span class="pillar-order-badge">05 / ECOSYSTEM</span>
+          </div>
+          <div class="pillar-card-body">
+            <div class="pillar-icon-header">
+              <div class="pillar-icon-box" style="background: rgba(232, 67, 147, 0.2); color: #e84393; border-color: rgba(232, 67, 147, 0.45);">
+                <i class="fas fa-network-wired"></i>
+              </div>
+              <span style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: #e84393; font-weight: 700;">Fellowship</span>
+            </div>
+            <h3>The Mycorrhizal Forest</h3>
+            <div class="pillar-role">Mentors, Partners & Community</div>
+            <p>
+              Trees never grow alone; underground root networks share water and warnings. Build your personal council of elder mentors, peers, and apprentices.
+            </p>
+            <div class="pillar-focus-tags">
+              <span class="focus-tag"><i class="fas fa-check-circle"></i> Root Networks</span>
+              <span class="focus-tag"><i class="fas fa-check-circle"></i> Elder Mentors</span>
+              <span class="focus-tag"><i class="fas fa-check-circle"></i> Mutual Abundance</span>
+            </div>
+            <a href="community.html" class="pillar-link">
+              <span>Enter the Forest</span> <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- 6. Golden Harvest -->
+        <article class="pillar-card" style="--card-bg-img: url('harvest.jpg'); --card-accent: #f1c40f;">
+          <div class="pillar-card-media">
+            <img src="harvest.jpg" alt="Golden autumnal wheat and ripe orchard fruit">
+            <span class="pillar-order-badge">06 / LEGACY</span>
+          </div>
+          <div class="pillar-card-body">
+            <div class="pillar-icon-header">
+              <div class="pillar-icon-box" style="background: rgba(241, 196, 15, 0.2); color: #f1c40f; border-color: rgba(241, 196, 15, 0.45);">
+                <i class="fas fa-award"></i>
+              </div>
+              <span style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: #f1c40f; font-weight: 700;">Reaping</span>
+            </div>
+            <h3>The Golden Harvest</h3>
+            <div class="pillar-role">Results, Gratitude & Wisdom</div>
+            <p>
+              Harvesting is not mere hoarding; it is mindful celebration, extracting eternal wisdom from triumphs and trials, and returning seeds into the earth.
+            </p>
+            <div class="pillar-focus-tags">
+              <span class="focus-tag"><i class="fas fa-check-circle"></i> Shared Feasting</span>
+              <span class="focus-tag"><i class="fas fa-check-circle"></i> Seed Preservation</span>
+              <span class="focus-tag"><i class="fas fa-check-circle"></i> Generous Legacy</span>
+            </div>
+            <a href="harvest.html" class="pillar-link">
+              <span>Reap the Fruits</span> <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Living Harvest Community Spotlight Section -->
+  <section class="section" style="background: radial-gradient(ellipse at 50% 30%, rgba(35, 78, 48, 0.35) 0%, var(--bg-secondary) 100%); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="content-grid-2col" style="align-items: center;">
+        
+        <div class="media-rounded-card anim-fade-in" style="box-shadow: var(--shadow-lg), 0 0 35px rgba(46, 204, 113, 0.25); border: 2px solid var(--border-bright);">
+          <img src="farmers-harvest.jpg" alt="Joyful farmers with overflowing baskets of freshly harvested cucumbers and greens" style="width: 100%; min-height: 480px; object-fit: cover;">
+          <div class="media-badge-tag">
+            <i class="fas fa-seedling"></i> <span>Living Soil & Communal Abundance</span>
+          </div>
+        </div>
+
+        <div class="anim-fade-up">
+          <span class="section-badge" style="border-color: var(--accent-gold); color: var(--accent-gold);">
+            <i class="fas fa-heart"></i> The Human Heart of Farming
+          </span>
+          <h2 class="section-title">
+            The Joy of the <em>Real Harvest</em>
+          </h2>
+          <p style="color: var(--text-muted); font-size: 1.15rem; line-height: 1.8; margin-bottom: 1.25rem;">
+            Look upon their radiant smiles and their woven baskets brimming with fresh cucumbers, leafy gourds, and vibrant greens. 
+            This is what cultivation looks like when life is aligned with natural law.
+          </p>
+          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 2rem;">
+            In modern society, success is often depicted as a solitary executive burning midnight oil in an empty glass tower. 
+            The Farmer of Life reminds us that true prosperity is always communal: clean soil, shared laughter, wholesome crops, and the profound peace of knowing your sweat nourished those you love.
+          </p>
+
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 2rem; border-top: 1px solid var(--border-subtle); padding-top: 1.5rem;">
+            <div>
+              <div style="font-family: var(--font-serif); font-size: 1.85rem; font-weight: 700; color: var(--text-gold);">100%</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Organic Rhythm</div>
+            </div>
+            <div>
+              <div style="font-family: var(--font-serif); font-size: 1.85rem; font-weight: 700; color: var(--accent-primary);">Zero</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Artificial Burnout</div>
+            </div>
+            <div>
+              <div style="font-family: var(--font-serif); font-size: 1.85rem; font-weight: 700; color: #38bdf8;">Tribe</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Shared Baskets</div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="community.html" class="btn btn-primary btn-lg"><i class="fas fa-users"></i> Explore Community Pillar</a>
+            <a href="harvest.html" class="btn btn-outline btn-lg"><i class="fas fa-apple-alt"></i> The Harvest Protocol</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy Comparison: The Modern Hustle vs. The Farmer -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-badge"><i class="fas fa-balance-scale"></i> Two Ways of Being</span>
+        <h2 class="section-title">The Hustle Mentality vs. <em>The Farmer's Way</em></h2>
+        <p class="section-subtitle">
+          Contrast the burnout trap of modern hyper-acceleration against the quiet, inevitable power of natural cultivation.
+        </p>
+      </div>
+
+      <div class="philosophy-table-card">
+        <div class="table-comparison-grid">
+          
+          <!-- Column 1: Hustle -->
+          <div class="comparison-column hustle-col">
+            <h3><i class="fas fa-fire"></i> The Frantic Hustle</h3>
+            <ul class="comparison-list">
+              <li>
+                <i class="fas fa-times-circle"></i>
+                <span><strong>Instant gratification:</strong> Demands fruit within weeks, leading to chronic anxiety and premature resignation.</span>
+              </li>
+              <li>
+                <i class="fas fa-times-circle"></i>
+                <span><strong>Neglects the soil:</strong> Sacrifices sleep, relationships, and health to sprint endlessly toward an arbitrary finish line.</span>
+              </li>
+              <li>
+                <i class="fas fa-times-circle"></i>
+                <span><strong>Fear of dormancy:</strong> Considers rest a character flaw; forces unnatural output even when the soul is in winter.</span>
+              </li>
+              <li>
+                <i class="fas fa-times-circle"></i>
+                <span><strong>Solitary struggle:</strong> Views everyone as cutthroat competition in a scarce, zero-sum colosseum.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 2: Farmer -->
+          <div class="comparison-column farmer-col">
+            <h3><i class="fas fa-seedling"></i> The Farmer of Life</h3>
+            <ul class="comparison-list">
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <span><strong>Organic patience:</strong> Trusts the invisible underground incubation period, knowing real roots take seasons to anchor.</span>
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <span><strong>Soil first:</strong> Protects physical vitality and mental clarity as the non-negotiable source of all enduring output.</span>
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <span><strong>Reverence for winter:</strong> Knows dormancy is not death; quiet rest gathers the vital sap needed for a luminous spring.</span>
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <span><strong>Symbiotic ecosystem:</strong> Thrives in mutual nourishment, uplifting fellow growers through shared light and wisdom.</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+  </section>
+
+  <!-- Interactive Life Season Self-Diagnosis Tool -->
+  <section class="section" style="padding-top: 1rem;">
+    <div class="container">
+      <div class="season-quiz-card">
+        <div style="text-align: center; max-width: 680px; margin: 0 auto;">
+          <span class="section-badge"><i class="fas fa-compass"></i> Seasonal Self-Diagnosis</span>
+          <h2 class="section-title">Which Season Is Your <em>Soul In Right Now</em>?</h2>
+          <p class="section-subtitle">
+            Nature never forces spring in the middle of winter. Select the honest state of your energy below to receive tailored ancient farming wisdom.
+          </p>
+        </div>
+
+        <div class="season-options-grid">
+          <button class="season-option-btn" data-season="spring" aria-label="Season of Spring option">
+            <span class="season-option-icon">🌸</span>
+            <span class="season-option-title">Spring (Germination)</span>
+            <span class="season-option-desc">I have brand-new visions, goals, or creative projects ready to break ground.</span>
+          </button>
+
+          <button class="season-option-btn" data-season="summer" aria-label="Season of Summer option">
+            <span class="season-option-icon">☀️</span>
+            <span class="season-option-title">Summer (Full Sun)</span>
+            <span class="season-option-desc">I have high momentum, working intensively, and watering daily efforts.</span>
+          </button>
+
+          <button class="season-option-btn" data-season="autumn" aria-label="Season of Autumn option">
+            <span class="season-option-icon">🍂</span>
+            <span class="season-option-title">Autumn (Harvest)</span>
+            <span class="season-option-desc">I am witnessing the culmination of past work, ready to share and celebrate.</span>
+          </button>
+
+          <button class="season-option-btn" data-season="winter" aria-label="Season of Winter option">
+            <span class="season-option-icon">❄️</span>
+            <span class="season-option-title">Winter (Rest & Sap)</span>
+            <span class="season-option-desc">I feel depleted, quiet, or fatigued; in need of deep root recovery and stillness.</span>
+          </button>
+        </div>
+
+        <!-- Dynamic Diagnosis Box -->
+        <div class="season-result-box" id="seasonResultBox"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Interactive Life Garden Widget -->
+  <section class="section">
+    <div class="container">
+      <div class="garden-widget-card">
+        <div class="garden-widget-inner">
+          <span class="section-badge"><i class="fas fa-spa"></i> Communal Garden Bed</span>
+          <h2 class="section-title">Plant Today's <em>Intention</em> Into the Soil</h2>
+          <p class="section-subtitle">
+            What is one virtue, goal, or healthy habit you wish to water this week? Plant your intention into our living garden.
+          </p>
+
+          <div class="widget-input-group">
+            <input type="text" id="inputIntention" class="garden-input" placeholder="e.g. Sowing daily gratitude before looking at my screen..." aria-label="Intention Input">
+            <button class="btn btn-primary" id="btnPlantIntention"><i class="fas fa-seedling"></i> Sow Intention</button>
+          </div>
+
+          <div class="sprouts-wall" id="sproutsWall">
+            <!-- Dynamically populated from main.js -->
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Interactive Daily Habit Sprout Tracker -->
+  <section class="section" style="padding-top: 1rem;">
+    <div class="container">
+      <div class="habit-tracker-card">
+        <div style="text-align: center; max-width: 680px; margin: 0 auto 1.5rem;">
+          <span class="section-badge"><i class="fas fa-leaf"></i> Kaizen Cultivation</span>
+          <h2 class="section-title">Daily <em>Habit Sprout</em> Tracker</h2>
+          <p class="section-subtitle">
+            A mighty oak is not built in a day; it drinks drop by drop. Tap each habit you have nourished today to watch your vitality sprout bloom.
+          </p>
+        </div>
+
+        <div id="habitTrackerContainer"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Botanical Wisdom Oracle (Khmer & English) -->
+  <section class="section" style="padding-top: 1rem; padding-bottom: 2rem;">
+    <div class="container">
+      <div class="wisdom-oracle-card">
+        <span class="section-badge"><i class="fas fa-seedling"></i> Ancient Farmer Oracle</span>
+        <h2 class="section-title">Seed of <em>Today's Wisdom</em></h2>
+        
+        <div class="oracle-quote-box" id="oracleQuoteBox">
+          <div class="oracle-khmer" id="oracleKhmer">អ្នកមិនអាចទាញពន្លកឱ្យលូតលាស់លឿនបានឡើយ មានតែការថែទាំដីឱ្យមានជីជាតិប៉ុណ្ណោះ។</div>
+          <div class="oracle-en" id="oracleEn">"You cannot pull a sprout to make it grow faster; you can only nurture the fertile soil."</div>
+        </div>
+
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem;">
+          <button class="btn btn-primary" id="btnPickSeed">
+            <i class="fas fa-random"></i> Pick Another Seed of Wisdom
+          </button>
+          <button class="btn btn-outline" id="btnCopyWisdom">
+            <i class="fas fa-copy"></i> Copy Wisdom
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Harvest Call to Action Banner -->
+  <section class="section" style="padding: 5rem 0;">
+    <div class="container">
+      <div style="background: linear-gradient(135deg, rgba(20, 48, 28, 0.9), rgba(12, 26, 17, 0.95)), url('harvest.jpg') center/cover; border: 1px solid var(--border-bright); border-radius: var(--radius-xl); padding: 4rem 3rem; text-align: center; box-shadow: var(--shadow-lg);">
+        <span class="section-badge"><i class="fas fa-scroll"></i> Your Season Is Now</span>
+        <h2 style="font-family: var(--font-serif); font-size: 2.85rem; color: #fff; margin-bottom: 1.25rem;">
+          Ready to Step into Your <em>Garden of Life</em>?
+        </h2>
+        <p style="color: var(--text-muted); max-width: 680px; margin: 0 auto 2.25rem; font-size: 1.15rem; line-height: 1.7;">
+          Take the Cultivator's Pledge, receive our weekly seasonal almanac, and begin tending the soil of your greatest aspirations.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 1.25rem; flex-wrap: wrap;">
+          <a href="call-to-action.html" class="btn btn-gold btn-lg"><i class="fas fa-hand-holding-heart"></i> Take the Cultivator's Pledge</a>
+          <a href="about.html" class="btn btn-outline btn-lg"><i class="fas fa-book-open"></i> Read the Philosophy</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community & Telegram Running Ticker (អក្សររត់ខាងក្រោម) -->
+  <div class="ticker-banner" style="background: linear-gradient(90deg, rgba(6, 15, 10, 0.98), rgba(12, 28, 18, 0.98), rgba(6, 15, 10, 0.98)); border-color: rgba(2, 132, 199, 0.35);">
+    <div class="ticker-wrap">
+      <div class="ticker-track" style="animation-duration: 36s;">
+        <div class="ticker-item">
+          <i class="fab fa-telegram-plane" style="color: #38bdf8;"></i>
+          <span class="ticker-khmer">ចូលរួមការសន្ទនាផ្ទាល់តាមរយៈ Telegram: @kimbunthonICT</span>
+          <span class="ticker-en">— Direct Steward Connection</span>
+          <span class="ticker-separator">✦</span>
+        </div>
+        <div class="ticker-item">
+          <i class="fas fa-seedling" style="color: var(--accent-primary);"></i>
+          <span class="ticker-khmer">ដាំសេចក្តីល្អថ្ងៃនេះ ដើម្បីប្រមូលផលសេចក្តីសុខថ្ងៃស្អែក</span>
+          <span class="ticker-en">— Sow Virtue Today, Reap Peace Tomorrow</span>
+          <span class="ticker-separator">✦</span>
+        </div>
+        <div class="ticker-item">
+          <i class="fas fa-users" style="color: #e84393;"></i>
+          <span class="ticker-khmer">សហគមន៍កសិករនៃជីវិត • រួមគ្នាចែករំលែកពន្លឺ</span>
+          <span class="ticker-en">— Fellowship of Life Cultivators</span>
+          <span class="ticker-separator">✦</span>
+        </div>
+
+        <!-- Repeat for smooth loop -->
+        <div class="ticker-item">
+          <i class="fab fa-telegram-plane" style="color: #38bdf8;"></i>
+          <span class="ticker-khmer">ចូលរួមការសន្ទនាផ្ទាល់តាមរយៈ Telegram: @kimbunthonICT</span>
+          <span class="ticker-en">— Direct Steward Connection</span>
+          <span class="ticker-separator">✦</span>
+        </div>
+        <div class="ticker-item">
+          <i class="fas fa-seedling" style="color: var(--accent-primary);"></i>
+          <span class="ticker-khmer">ដាំសេចក្តីល្អថ្ងៃនេះ ដើម្បីប្រមូលផលសេចក្តីសុខថ្ងៃស្អែក</span>
+          <span class="ticker-en">— Sow Virtue Today, Reap Peace Tomorrow</span>
+          <span class="ticker-separator">✦</span>
+        </div>
+        <div class="ticker-item">
+          <i class="fas fa-users" style="color: #e84393;"></i>
+          <span class="ticker-khmer">សហគមន៍កសិករនៃជីវិត • រួមគ្នាចែករំលែកពន្លឺ</span>
+          <span class="ticker-en">— Fellowship of Life Cultivators</span>
+          <span class="ticker-separator">✦</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-icon-wrap"><i class="fas fa-tree"></i></div>
+            <div class="brand-text">Farmer<span>OfLife</span></div>
+          </a>
+          <p>
+            An existential garden for those weary of artificial noise. Rooted in timeless agricultural philosophy, honoring the natural rhythm of human growth.
+          </p>
+          <div class="footer-socials">
+            <a href="https://t.me/kimbunthonICT" target="_blank" rel="noopener noreferrer" class="social-link" title="Telegram (@kimbunthonICT)" aria-label="Telegram" style="background: rgba(2, 132, 199, 0.2); color: #38bdf8; border-color: rgba(2, 132, 199, 0.45);"><i class="fab fa-telegram-plane"></i></a>
+            <a href="#" class="social-link" title="Twitter / X" aria-label="Social Link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link" title="YouTube" aria-label="Social Link"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-link" title="Instagram" aria-label="Social Link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" title="Substack" aria-label="Social Link"><i class="fas fa-feather-alt"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>The Pillars</h4>
+          <div class="footer-links">
+            <a href="soil.html">1. Soil & Roots</a>
+            <a href="seeds.html">2. Seeds of Intent</a>
+            <a href="growth.html">3. Daily Growth</a>
+            <a href="seasons.html">4. Life Seasons</a>
+            <a href="community.html">5. Community</a>
+            <a href="harvest.html">6. Golden Harvest</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <div class="footer-links">
+            <a href="about.html">The Philosophy</a>
+            <a href="testimonial.html">Cultivator Stories</a>
+            <a href="contact.html">Send Word</a>
+            <a href="call-to-action.html">Cultivator's Pledge</a>
+            <a href="404.html">The Wild Meadow</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Weekly Seed Almanack</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1rem;">
+            Receive one quiet, profound reflection on natural growth delivered every Sunday morning.
+          </p>
+          <div class="form-group" style="margin-bottom: 0.75rem;">
+            <input type="email" class="form-control" placeholder="your.spirit@sanctuary.com" style="padding: 0.7rem 1rem;">
+          </div>
+          <button class="btn btn-primary btn-sm" style="width: 100%;" onclick="window.showToast('You are subscribed to the Sunday Almanack.', '✉️')">
+            <i class="fas fa-paper-plane"></i> Subscribe to Seed Almanack
+          </button>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Farmer of Life Sanctuary. All rights reserved. Sown with devotion.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#">Privacy of the Soul</a>
+          <a href="#">Terms of the Soil</a>
+          <a href="#siteHeader">Return to Canopy <i class="fas fa-arrow-up"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Sanctuary Audio & Canopy HUD -->
+  <div class="sanctuary-hud" id="sanctuaryHUD" role="region" aria-label="Sanctuary Ambience Controls">
+    <button class="hud-sound-btn" id="hudSoundBtn" title="Toggle Forest Wind Ambience">
+      <div class="hud-equalizer" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <span class="hud-sound-text">Forest Sound</span>
+    </button>
+    <button class="hud-scroll-top" id="hudScrollTop" title="Return to Canopy" aria-label="Return to Canopy">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="tree.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

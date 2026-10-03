@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404: The Wild Meadow — Farmer of Life</title>
+  <meta name="description" content="You have wandered off the marked trail into the wild meadow. Let the compass guide you back to the root trunk.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Kantumruy+Pro:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Critical Base Styles: Prevents any white flash, ensures instant botanical dark mode -->
+  <style>
+    :root {
+      --bg-primary: #0a130c;
+      --bg-secondary: #0f1c12;
+      --bg-tertiary: #16281b;
+      --bg-card: rgba(18, 33, 22, 0.75);
+      --bg-card-hover: rgba(26, 48, 32, 0.88);
+      --border-subtle: rgba(72, 187, 120, 0.15);
+      --border-medium: rgba(72, 187, 120, 0.28);
+      --border-bright: rgba(104, 211, 145, 0.45);
+      --accent-primary: #2ecc71;
+      --accent-secondary: #48bb78;
+      --accent-gold: #f39c12;
+      --text-main: #f8fafc;
+      --text-muted: #cbd5e1;
+      --text-gold: #f6c26b;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-display: 'Cinzel', serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    [data-theme="light"] {
+      --bg-primary: #f4fbf5;
+      --bg-secondary: #eaf6ec;
+      --text-main: #0f2415;
+      --text-muted: #33533b;
+    }
+    html, body {
+      background-color: var(--bg-primary, #0a130c) !important;
+      color: var(--text-main, #f0fdf4) !important;
+      font-family: var(--font-sans);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: #2ecc71; text-decoration: none; }
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(10, 19, 12, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+  </style>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="animate.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%B3%3C/text%3E%3C/svg%3E">
+  <script>
+    // Universal image error fallback for GitHub Pages & Local
+    window.addEventListener('error', function(e) {
+      if (e.target && e.target.tagName === 'IMG') {
+        var src = e.target.getAttribute('src');
+        if (src && !e.target.dataset.hasFallenBack) {
+          e.target.dataset.hasFallenBack = 'true';
+          e.target.src = src.indexOf('img/') === 0 ? src.replace('img/', '') : ('img/' + src);
+        }
+      }
+    }, true);
+  </script>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon-wrap"><i class="fas fa-tree"></i></div>
+        <div class="brand-text">Farmer<span>OfLife</span></div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Root Trunk</a>
+        <a href="about.html" class="nav-link">The Farmer</a>
+        <div class="nav-dropdown">
+          <div class="nav-link dropdown-toggle" role="button">
+            <span>Life Pillars</span> <i class="fas fa-chevron-down" style="font-size: 0.75rem;"></i>
+          </div>
+          <div class="dropdown-menu">
+            <a href="soil.html" class="dropdown-item"><i class="fas fa-mountain"></i> 1. Soil & Roots</a>
+            <a href="seeds.html" class="dropdown-item"><i class="fas fa-seedling"></i> 2. Seeds & Intent</a>
+            <a href="growth.html" class="dropdown-item"><i class="fas fa-leaf"></i> 3. Daily Growth</a>
+            <a href="seasons.html" class="dropdown-item"><i class="fas fa-calendar-alt"></i> 4. Life Seasons</a>
+            <a href="community.html" class="dropdown-item"><i class="fas fa-users"></i> 5. Mycorrhizal Tribe</a>
+            <a href="harvest.html" class="dropdown-item"><i class="fas fa-apple-alt"></i> 6. Golden Harvest</a>
+          </div>
+        </div>
+        <a href="testimonial.html" class="nav-link">Testimonials</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="call-to-action.html" class="btn-nav-cta"><i class="fas fa-seedling"></i> Begin Cultivation</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme"><i class="fas fa-sun"></i></button>
+        <button class="sound-toggle" id="soundToggle" aria-label="Toggle Sound"><i class="fas fa-volume-mute"></i></button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 404 Section -->
+  <section class="hero-section" style="text-align: center; justify-content: center; min-height: 85vh;">
+    <div class="hero-bg-overlay" style="opacity: 0.25;"></div>
+    <div class="container" style="max-width: 680px;" class="anim-fade-up">
+      <div style="font-size: 5rem; color: var(--accent-gold); margin-bottom: 1rem;" class="anim-float">
+        <i class="fas fa-compass"></i>
+      </div>
+      <span class="section-badge"><i class="fas fa-map-signs"></i> Off the Beaten Track</span>
+      <h1 class="hero-title" style="font-size: 3.2rem; margin-bottom: 1rem;">
+        You Have Wandered into the <em>Wild Meadow</em>
+      </h1>
+      <p class="hero-description" style="margin: 0 auto 2.5rem;">
+        Even untrodden paths have wild clover and sweet berry briars. But the page you seek has returned to compost. 
+        Allow the compass needle to direct your steps back to the central Root Trunk.
+      </p>
+
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="index.html" class="btn btn-primary btn-lg"><i class="fas fa-home"></i> Return to Root Trunk</a>
+        <a href="about.html" class="btn btn-outline btn-lg"><i class="fas fa-book-open"></i> Read The Philosophy</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding-top: 0;">
+        <div>&copy; 2026 Farmer of Life Sanctuary. All rights reserved.</div>
+        <a href="index.html">Back to Home <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <!-- Floating Sanctuary Audio & Canopy HUD -->
+  <div class="sanctuary-hud" id="sanctuaryHUD" role="region" aria-label="Sanctuary Ambience Controls">
+    <button class="hud-sound-btn" id="hudSoundBtn" title="Toggle Forest Wind Ambience">
+      <div class="hud-equalizer" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <span class="hud-sound-text">Forest Sound</span>
+    </button>
+    <button class="hud-scroll-top" id="hudScrollTop" title="Return to Canopy" aria-label="Return to Canopy">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </div>
+</body>
+</html>

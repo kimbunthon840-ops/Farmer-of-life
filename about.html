@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About The Farmer & The Philosophy — Farmer of Life</title>
+  <meta name="description" content="Discover the origins of the Farmer of Life and the 7 Inviolable Laws of the Farm that govern human fulfillment and natural achievement.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Kantumruy+Pro:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Critical Base Styles: Prevents any white flash, ensures instant botanical dark mode -->
+  <style>
+    :root {
+      --bg-primary: #0a130c;
+      --bg-secondary: #0f1c12;
+      --bg-tertiary: #16281b;
+      --bg-card: rgba(18, 33, 22, 0.75);
+      --bg-card-hover: rgba(26, 48, 32, 0.88);
+      --border-subtle: rgba(72, 187, 120, 0.15);
+      --border-medium: rgba(72, 187, 120, 0.28);
+      --border-bright: rgba(104, 211, 145, 0.45);
+      --accent-primary: #2ecc71;
+      --accent-secondary: #48bb78;
+      --accent-gold: #f39c12;
+      --text-main: #f8fafc;
+      --text-muted: #cbd5e1;
+      --text-gold: #f6c26b;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-display: 'Cinzel', serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    [data-theme="light"] {
+      --bg-primary: #f4fbf5;
+      --bg-secondary: #eaf6ec;
+      --text-main: #0f2415;
+      --text-muted: #33533b;
+    }
+    html, body {
+      background-color: var(--bg-primary, #0a130c) !important;
+      color: var(--text-main, #f0fdf4) !important;
+      font-family: var(--font-sans);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: #2ecc71; text-decoration: none; }
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(10, 19, 12, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+  </style>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="animate.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%B3%3C/text%3E%3C/svg%3E">
+  <script>
+    // Universal image error fallback for GitHub Pages & Local
+    window.addEventListener('error', function(e) {
+      if (e.target && e.target.tagName === 'IMG') {
+        var src = e.target.getAttribute('src');
+        if (src && !e.target.dataset.hasFallenBack) {
+          e.target.dataset.hasFallenBack = 'true';
+          e.target.src = src.indexOf('img/') === 0 ? src.replace('img/', '') : ('img/' + src);
+        }
+      }
+    }, true);
+  </script>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon-wrap"><i class="fas fa-tree"></i></div>
+        <div class="brand-text">Farmer<span>OfLife</span></div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Root Trunk</a>
+        <a href="about.html" class="nav-link active">The Farmer</a>
+        <div class="nav-dropdown">
+          <div class="nav-link dropdown-toggle" role="button">
+            <span>Life Pillars</span> <i class="fas fa-chevron-down" style="font-size: 0.75rem;"></i>
+          </div>
+          <div class="dropdown-menu">
+            <a href="soil.html" class="dropdown-item"><i class="fas fa-mountain"></i> 1. Soil & Roots</a>
+            <a href="seeds.html" class="dropdown-item"><i class="fas fa-seedling"></i> 2. Seeds & Intent</a>
+            <a href="growth.html" class="dropdown-item"><i class="fas fa-leaf"></i> 3. Daily Growth</a>
+            <a href="seasons.html" class="dropdown-item"><i class="fas fa-calendar-alt"></i> 4. Life Seasons</a>
+            <a href="community.html" class="dropdown-item"><i class="fas fa-users"></i> 5. Mycorrhizal Tribe</a>
+            <a href="harvest.html" class="dropdown-item"><i class="fas fa-apple-alt"></i> 6. Golden Harvest</a>
+          </div>
+        </div>
+        <a href="testimonial.html" class="nav-link">Testimonials</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="call-to-action.html" class="btn-nav-cta"><i class="fas fa-seedling"></i> Begin Cultivation</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme"><i class="fas fa-sun"></i></button>
+        <button class="sound-toggle" id="soundToggle" aria-label="Toggle Sound"><i class="fas fa-volume-mute"></i></button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero Header -->
+  <section class="page-hero">
+    <img src="hero.jpg" alt="Ancient Forest" class="page-hero-bg">
+    <div class="container page-hero-content anim-fade-up">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> <i class="fas fa-chevron-right" style="font-size: 0.65rem;"></i> <span>The Farmer & Philosophy</span>
+      </div>
+      <span class="section-badge"><i class="fas fa-user-shield"></i> The Ancient Perspective</span>
+      <h1 class="page-hero-title">Who is the <em>Farmer of Life</em>?</h1>
+      <p class="page-hero-lead">
+        We are not industrial machines meant to produce endless quarterly output without pause. 
+        We are organic ecosystems governed by the sacred laws of the soil, the sun, and the rain.
+      </p>
+    </div>
+  </section>
+
+  <!-- Origin Story -->
+  <section class="section">
+    <div class="container">
+      <div class="content-grid-2col">
+        <div class="media-rounded-card anim-fade-in">
+          <img src="farmer-portrait.jpg" alt="The Steward in the Garden" style="min-height: 440px;">
+        </div>
+        <div class="anim-fade-up">
+          <span class="section-badge"><i class="fas fa-history"></i> The Origin</span>
+          <h2 class="section-title">Born from the Ash of <em>Exhaustion</em></h2>
+          <p style="color: var(--text-muted); margin-bottom: 1.25rem;">
+            Like many in our time, our journey began inside the high-velocity furnace of the modern hyper-city. 
+            Eighty-hour workweeks, chronic adrenaline surges, endless notifications, and the intoxicating lie that 
+            human worth is measured solely by speed and volume of extraction.
+          </p>
+          <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+            Eventually, the soil collapsed. Health cracked, joy evaporated, and the spirit turned arid. 
+            It was then that an ancient small orchard became our teacher. Observing the apple trees, a revelation struck: 
+            <em>no tree agonizes over competing with its neighbor; it simply drinks the groundwater, faces the sun, drops its leaves when winter arrives, and yields immense sweetness when the season is ripe.</em>
+          </p>
+
+          <div class="quote-block">
+            "You cannot cram on a farm. You cannot neglect the field all spring and summer, and then pull an all-nighter before the harvest."
+            <span class="quote-author">— Stephen R. Covey (The Law of the Farm)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The 7 Inviolable Laws of the Farm -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-badge"><i class="fas fa-gavel"></i> Inviolable Principles</span>
+        <h2 class="section-title">The Seven Laws of <em>The Living Farm</em></h2>
+        <p class="section-subtitle">
+          These principles have governed nature for four billion years. Human willpower cannot negotiate with them.
+        </p>
+      </div>
+
+      <div class="pillars-grid">
+        
+        <div class="pillar-card">
+          <div class="pillar-icon-box"><i class="fas fa-seedling"></i></div>
+          <h3 style="margin-top: 1rem;">1. Law of Sowing & Reaping</h3>
+          <div class="pillar-role">Equivalence of Cause & Effect</div>
+          <p>You cannot sow thistle seeds and pray for sweet figs. Every thought, meal, conversation, and hour spent is a seed dropped into the dark furrow of your future.</p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-box"><i class="fas fa-hourglass-half"></i></div>
+          <h3 style="margin-top: 1rem;">2. Law of Incubation</h3>
+          <div class="pillar-role">The Inevitable Lag</div>
+          <p>Between planting and harvest lies an invisible gestation period. Digging up the seed every two days to check if it's growing only kills it. Cultivation demands sacred trust.</p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-box"><i class="fas fa-mountain"></i></div>
+          <h3 style="margin-top: 1rem;">3. Law of the Soil</h3>
+          <div class="pillar-role">Condition Dictates Capacity</div>
+          <p>The finest heirloom seed will wither in poisoned, compacted earth. Before demanding world-changing results, you must obsess over the health of your physical biology and peace of mind.</p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-box"><i class="fas fa-cut"></i></div>
+          <h3 style="margin-top: 1rem;">4. Law of Pruning</h3>
+          <div class="pillar-role">Less to Bear More</div>
+          <p>A vine left unpruned becomes an unmanageable tangle of leafy clutter with sour, shriveled grapes. You must cut away good branches so the great branches can bear sublime fruit.</p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-box"><i class="fas fa-snowflake"></i></div>
+          <h3 style="margin-top: 1rem;">5. Law of Seasons</h3>
+          <div class="pillar-role">Rhythm Over Uniformity</div>
+          <p>Nature never attempts to be in perpetual summer. There is a time to prepare, a time to sow, a time to defend, a time to harvest, and a holy time to lay completely fallow in winter.</p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-box"><i class="fas fa-hands-helping"></i></div>
+          <h3 style="margin-top: 1rem;">6. Law of Interdependence</h3>
+          <div class="pillar-role">The Mycorrhizal Bond</div>
+          <p>A solitary tree in an open plain is vulnerable to the wind. In a deep grove, root systems interlock beneath the ground, sharing nutrients and bracing against the tempest together.</p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-box"><i class="fas fa-infinity"></i></div>
+          <h3 style="margin-top: 1rem;">7. Law of Abundance & Return</h3>
+          <div class="pillar-role">The Regenerative Cycle</div>
+          <p>A single kernel of corn produces two ears with eight hundred kernels. Abundance is nature's default when respected. The harvest must then feed others and replenish the soil.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Explore Pillars -->
+  <section class="section" style="text-align: center;">
+    <div class="container">
+      <span class="section-badge"><i class="fas fa-compass"></i> Begin the Journey</span>
+      <h2 class="section-title">Start with the <em>First Pillar</em></h2>
+      <p class="section-subtitle" style="margin-bottom: 2rem;">
+        Everything begins beneath the surface. Examine the soil of your physical and emotional foundation.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1rem;">
+        <a href="soil.html" class="btn btn-primary btn-lg"><i class="fas fa-mountain"></i> Explore Pillar 1: Soil & Roots</a>
+        <a href="index.html" class="btn btn-outline btn-lg"><i class="fas fa-tree"></i> View Interactive Tree</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-icon-wrap"><i class="fas fa-tree"></i></div>
+            <div class="brand-text">Farmer<span>OfLife</span></div>
+          </a>
+          <p>An existential sanctuary honoring natural cycles, timeless wisdom, and organic human growth.</p>
+          <div class="social-links" style="display: flex; gap: 0.75rem; margin-top: 1rem;">
+            <a href="https://t.me/kimbunthonICT" target="_blank" rel="noopener noreferrer" class="social-link" title="Telegram (@kimbunthonICT)" aria-label="Telegram" style="background: rgba(2, 132, 199, 0.2); color: #38bdf8; border-color: rgba(2, 132, 199, 0.45);"><i class="fab fa-telegram-plane"></i></a>
+            <a href="#" class="social-link" title="Forest Podcast" aria-label="Podcast"><i class="fas fa-podcast"></i></a>
+            <a href="#" class="social-link" title="Community Forum" aria-label="Community"><i class="fas fa-seedling"></i></a>
+            <a href="contact.html" class="social-link" title="Contact Us" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Life Pillars</h4>
+          <div class="footer-links">
+            <a href="soil.html">1. Soil & Roots</a>
+            <a href="seeds.html">2. Seeds of Intent</a>
+            <a href="growth.html">3. Daily Growth</a>
+            <a href="seasons.html">4. Life Seasons</a>
+            <a href="community.html">5. Community</a>
+            <a href="harvest.html">6. Golden Harvest</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Sanctuary</h4>
+          <div class="footer-links">
+            <a href="about.html">The Philosophy</a>
+            <a href="testimonial.html">Cultivator Stories</a>
+            <a href="contact.html">Send Word</a>
+            <a href="call-to-action.html">The Covenant</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Begin Today</h4>
+          <a href="call-to-action.html" class="btn btn-gold btn-sm"><i class="fas fa-seedling"></i> Take Cultivator's Pledge</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Farmer of Life Sanctuary. All rights reserved.</div>
+        <a href="#siteHeader">Back to Top <i class="fas fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <!-- Floating Sanctuary Audio & Canopy HUD -->
+  <div class="sanctuary-hud" id="sanctuaryHUD" role="region" aria-label="Sanctuary Ambience Controls">
+    <button class="hud-sound-btn" id="hudSoundBtn" title="Toggle Forest Wind Ambience">
+      <div class="hud-equalizer" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <span class="hud-sound-text">Forest Sound</span>
+    </button>
+    <button class="hud-scroll-top" id="hudScrollTop" title="Return to Canopy" aria-label="Return to Canopy">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Cultivator's Covenant — Step Into the Garden | Farmer of Life</title>
+  <meta name="description" content="Consecrate your commitment to natural growth. Generate your personal Cultivator's Covenant and embark on the 30-day life cultivation journey.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Kantumruy+Pro:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Critical Base Styles: Prevents any white flash, ensures instant botanical dark mode -->
+  <style>
+    :root {
+      --bg-primary: #0a130c;
+      --bg-secondary: #0f1c12;
+      --bg-tertiary: #16281b;
+      --bg-card: rgba(18, 33, 22, 0.75);
+      --bg-card-hover: rgba(26, 48, 32, 0.88);
+      --border-subtle: rgba(72, 187, 120, 0.15);
+      --border-medium: rgba(72, 187, 120, 0.28);
+      --border-bright: rgba(104, 211, 145, 0.45);
+      --accent-primary: #2ecc71;
+      --accent-secondary: #48bb78;
+      --accent-gold: #f39c12;
+      --text-main: #f8fafc;
+      --text-muted: #cbd5e1;
+      --text-gold: #f6c26b;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-display: 'Cinzel', serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    [data-theme="light"] {
+      --bg-primary: #f4fbf5;
+      --bg-secondary: #eaf6ec;
+      --text-main: #0f2415;
+      --text-muted: #33533b;
+    }
+    html, body {
+      background-color: var(--bg-primary, #0a130c) !important;
+      color: var(--text-main, #f0fdf4) !important;
+      font-family: var(--font-sans);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: #2ecc71; text-decoration: none; }
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(10, 19, 12, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+  </style>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="animate.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%B3%3C/text%3E%3C/svg%3E">
+  <script>
+    // Universal image error fallback for GitHub Pages & Local
+    window.addEventListener('error', function(e) {
+      if (e.target && e.target.tagName === 'IMG') {
+        var src = e.target.getAttribute('src');
+        if (src && !e.target.dataset.hasFallenBack) {
+          e.target.dataset.hasFallenBack = 'true';
+          e.target.src = src.indexOf('img/') === 0 ? src.replace('img/', '') : ('img/' + src);
+        }
+      }
+    }, true);
+  </script>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon-wrap"><i class="fas fa-tree"></i></div>
+        <div class="brand-text">Farmer<span>OfLife</span></div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Root Trunk</a>
+        <a href="about.html" class="nav-link">The Farmer</a>
+        <div class="nav-dropdown">
+          <div class="nav-link dropdown-toggle" role="button">
+            <span>Life Pillars</span> <i class="fas fa-chevron-down" style="font-size: 0.75rem;"></i>
+          </div>
+          <div class="dropdown-menu">
+            <a href="soil.html" class="dropdown-item"><i class="fas fa-mountain"></i> 1. Soil & Roots</a>
+            <a href="seeds.html" class="dropdown-item"><i class="fas fa-seedling"></i> 2. Seeds & Intent</a>
+            <a href="growth.html" class="dropdown-item"><i class="fas fa-leaf"></i> 3. Daily Growth</a>
+            <a href="seasons.html" class="dropdown-item"><i class="fas fa-calendar-alt"></i> 4. Life Seasons</a>
+            <a href="community.html" class="dropdown-item"><i class="fas fa-users"></i> 5. Mycorrhizal Tribe</a>
+            <a href="harvest.html" class="dropdown-item"><i class="fas fa-apple-alt"></i> 6. Golden Harvest</a>
+          </div>
+        </div>
+        <a href="testimonial.html" class="nav-link">Testimonials</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="call-to-action.html" class="btn-nav-cta active"><i class="fas fa-seedling"></i> Begin Cultivation</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme"><i class="fas fa-sun"></i></button>
+        <button class="sound-toggle" id="soundToggle" aria-label="Toggle Sound"><i class="fas fa-volume-mute"></i></button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero Header -->
+  <section class="page-hero">
+    <img src="harvest.jpg" alt="Rich golden harvest" class="page-hero-bg">
+    <div class="container page-hero-content anim-fade-up">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> <i class="fas fa-chevron-right" style="font-size: 0.65rem;"></i> <span>The Cultivator's Covenant</span>
+      </div>
+      <span class="section-badge" style="border-color: var(--accent-gold); color: var(--accent-gold);"><i class="fas fa-scroll"></i> Consecration</span>
+      <h1 class="page-hero-title">Step Into the <em>Garden of Life</em></h1>
+      <p class="page-hero-lead">
+        A life is not built by reading philosophy; it is forged by sinking your hands into the dark earth. 
+        Take the sacred covenant, pledge your devotion to natural law, and receive your personalized certificate.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive Covenant Generator Section -->
+  <section class="section">
+    <div class="container" style="max-width: 860px;">
+      <div class="section-title-wrap">
+        <span class="section-badge"><i class="fas fa-certificate"></i> Personalized Manifesto</span>
+        <h2 class="section-title">The Cultivator's <em>Sacred Covenant</em></h2>
+        <p class="section-subtitle">
+          Enter your name below to consecrate your personal covenant as a sovereign Farmer of Life.
+        </p>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: var(--radius-xl); padding: 3rem; box-shadow: var(--shadow-card);">
+        <div class="form-group">
+          <label class="form-label">Your Name as It Shall Appear Upon the Decree</label>
+          <input type="text" id="pledgeName" class="form-control" placeholder="e.g. Gabriel Vance" style="font-size: 1.1rem; padding: 1rem 1.25rem;">
+        </div>
+
+        <button type="button" class="btn btn-gold btn-lg" style="width: 100%; margin-top: 1rem;" id="btnGeneratePledge">
+          <i class="fas fa-feather-alt"></i> Consecrate My Covenant
+        </button>
+
+        <!-- Dynamic Certificate Area -->
+        <div id="pledgeCertificate" style="display: none;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pathways of Participation -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-badge"><i class="fas fa-road"></i> Pathways of Practice</span>
+        <h2 class="section-title">Choose Your <em>Cultivation Level</em></h2>
+        <p class="section-subtitle">
+          Whether you walk as a solitary contemplative or seek deep communal immersion, find your place in the grove.
+        </p>
+      </div>
+
+      <div class="pillars-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+        
+        <!-- Tier 1 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box"><i class="fas fa-seedling"></i></div>
+          <h3 style="margin-top: 1rem;">The Solitary Seeker</h3>
+          <div class="pillar-role">Free & Open to All</div>
+          <p>
+            Receive our quiet Sunday Seed Almanack, access the interactive Soil pH Quiz, and study the 6 Pillars independently at your own natural pace.
+          </p>
+          <ul class="feature-list" style="margin-bottom: 2rem;">
+            <li><i class="fas fa-check"></i> Sunday Seed Almanack</li>
+            <li><i class="fas fa-check"></i> Life Soil Health Self-Assessment</li>
+            <li><i class="fas fa-check"></i> Printable Covenant Certificate</li>
+          </ul>
+          <a href="index.html" class="btn btn-outline" style="width: 100%;"><i class="fas fa-tree"></i> Free Stewardship</a>
+        </div>
+
+        <!-- Tier 2 -->
+        <div class="pillar-card" style="border-color: var(--accent-primary); box-shadow: var(--shadow-lg), var(--glow-green);">
+          <div class="pillar-icon-box" style="background: rgba(46, 204, 113, 0.2); color: var(--accent-primary);"><i class="fas fa-fire"></i></div>
+          <div style="display: inline-block; background: var(--accent-primary); color: #fff; font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.65rem; border-radius: var(--radius-pill); text-transform: uppercase; margin-bottom: 0.5rem;">Most Recommended</div>
+          <h3 style="margin-top: 0.5rem;">The Hearth Fellowship</h3>
+          <div class="pillar-role">Bi-Weekly Mastermind Circle</div>
+          <p>
+            Join an intimate, curated circle of 6 fellow cultivators. Bi-weekly video councils, seasonal pruning audits, and shared accountability.
+          </p>
+          <ul class="feature-list" style="margin-bottom: 2rem;">
+            <li><i class="fas fa-check"></i> Everything in Solitary Seeker</li>
+            <li><i class="fas fa-check"></i> Bi-Weekly Hearth Councils</li>
+            <li><i class="fas fa-check"></i> Seasonal Solstice Alignment Audits</li>
+            <li><i class="fas fa-check"></i> Private Direct Messenger with Stewards</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary" style="width: 100%;"><i class="fas fa-users"></i> Apply for Fellowship</a>
+        </div>
+
+        <!-- Tier 3 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box" style="color: var(--accent-gold);"><i class="fas fa-mountain"></i></div>
+          <h3 style="margin-top: 1rem;">The Mountain Sanctuary</h3>
+          <div class="pillar-role">Annual In-Person Immersion</div>
+          <p>
+            Four days of complete digital silence in our Cascade Range orchard. Wood fires, organic harvest feasts, guided breathwork, and life architecture.
+          </p>
+          <ul class="feature-list" style="margin-bottom: 2rem;">
+            <li><i class="fas fa-check"></i> 4-Day Cascade Mountain Immersion</li>
+            <li><i class="fas fa-check"></i> Private 1-on-1 Life Architecture</li>
+            <li><i class="fas fa-check"></i> Lifetime Steward Grove Access</li>
+          </ul>
+          <a href="contact.html" class="btn btn-gold" style="width: 100%;"><i class="fas fa-compass"></i> Inquire for Solstice Retreat</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-icon-wrap"><i class="fas fa-tree"></i></div>
+            <div class="brand-text">Farmer<span>OfLife</span></div>
+          </a>
+          <p>An existential sanctuary honoring natural cycles, timeless wisdom, and organic human growth.</p>
+          <div class="social-links" style="display: flex; gap: 0.75rem; margin-top: 1rem;">
+            <a href="https://t.me/kimbunthonICT" target="_blank" rel="noopener noreferrer" class="social-link" title="Telegram (@kimbunthonICT)" aria-label="Telegram" style="background: rgba(2, 132, 199, 0.2); color: #38bdf8; border-color: rgba(2, 132, 199, 0.45);"><i class="fab fa-telegram-plane"></i></a>
+            <a href="#" class="social-link" title="Forest Podcast" aria-label="Podcast"><i class="fas fa-podcast"></i></a>
+            <a href="#" class="social-link" title="Community Forum" aria-label="Community"><i class="fas fa-seedling"></i></a>
+            <a href="contact.html" class="social-link" title="Contact Us" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Life Pillars</h4>
+          <div class="footer-links">
+            <a href="soil.html">1. Soil & Roots</a>
+            <a href="seeds.html">2. Seeds of Intent</a>
+            <a href="growth.html">3. Daily Growth</a>
+            <a href="seasons.html">4. Life Seasons</a>
+            <a href="community.html">5. Community</a>
+            <a href="harvest.html">6. Golden Harvest</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Sanctuary</h4>
+          <div class="footer-links">
+            <a href="about.html">The Philosophy</a>
+            <a href="testimonial.html">Cultivator Stories</a>
+            <a href="contact.html">Send Word</a>
+            <a href="call-to-action.html" class="active">The Covenant</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Reach Us</h4>
+          <a href="contact.html" class="btn btn-gold btn-sm"><i class="fas fa-envelope"></i> Send Missive</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Farmer of Life Sanctuary. All rights reserved.</div>
+        <a href="#siteHeader">Back to Top <i class="fas fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <!-- Floating Sanctuary Audio & Canopy HUD -->
+  <div class="sanctuary-hud" id="sanctuaryHUD" role="region" aria-label="Sanctuary Ambience Controls">
+    <button class="hud-sound-btn" id="hudSoundBtn" title="Toggle Forest Wind Ambience">
+      <div class="hud-equalizer" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <span class="hud-sound-text">Forest Sound</span>
+    </button>
+    <button class="hud-scroll-top" id="hudScrollTop" title="Return to Canopy" aria-label="Return to Canopy">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </div>
+</body>
+</html>

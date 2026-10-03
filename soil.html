@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pillar 1: Soil & Roots — Health, Habits & Mindset | Farmer of Life</title>
+  <meta name="description" content="Tend your unseen subterranean foundation. You cannot grow a mighty redwood in toxic, parched soil. Master physical vitality, mental clarity, and habit compost.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Kantumruy+Pro:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Critical Base Styles: Prevents any white flash, ensures instant botanical dark mode -->
+  <style>
+    :root {
+      --bg-primary: #0a130c;
+      --bg-secondary: #0f1c12;
+      --bg-tertiary: #16281b;
+      --bg-card: rgba(18, 33, 22, 0.75);
+      --bg-card-hover: rgba(26, 48, 32, 0.88);
+      --border-subtle: rgba(72, 187, 120, 0.15);
+      --border-medium: rgba(72, 187, 120, 0.28);
+      --border-bright: rgba(104, 211, 145, 0.45);
+      --accent-primary: #2ecc71;
+      --accent-secondary: #48bb78;
+      --accent-gold: #f39c12;
+      --text-main: #f8fafc;
+      --text-muted: #cbd5e1;
+      --text-gold: #f6c26b;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-display: 'Cinzel', serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    [data-theme="light"] {
+      --bg-primary: #f4fbf5;
+      --bg-secondary: #eaf6ec;
+      --text-main: #0f2415;
+      --text-muted: #33533b;
+    }
+    html, body {
+      background-color: var(--bg-primary, #0a130c) !important;
+      color: var(--text-main, #f0fdf4) !important;
+      font-family: var(--font-sans);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: #2ecc71; text-decoration: none; }
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(10, 19, 12, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+  </style>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="animate.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%B3%3C/text%3E%3C/svg%3E">
+  <script>
+    // Universal image error fallback for GitHub Pages & Local
+    window.addEventListener('error', function(e) {
+      if (e.target && e.target.tagName === 'IMG') {
+        var src = e.target.getAttribute('src');
+        if (src && !e.target.dataset.hasFallenBack) {
+          e.target.dataset.hasFallenBack = 'true';
+          e.target.src = src.indexOf('img/') === 0 ? src.replace('img/', '') : ('img/' + src);
+        }
+      }
+    }, true);
+  </script>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon-wrap"><i class="fas fa-tree"></i></div>
+        <div class="brand-text">Farmer<span>OfLife</span></div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Root Trunk</a>
+        <a href="about.html" class="nav-link">The Farmer</a>
+        <div class="nav-dropdown">
+          <div class="nav-link dropdown-toggle active" role="button">
+            <span>Life Pillars</span> <i class="fas fa-chevron-down" style="font-size: 0.75rem;"></i>
+          </div>
+          <div class="dropdown-menu">
+            <a href="soil.html" class="dropdown-item active"><i class="fas fa-mountain"></i> 1. Soil & Roots</a>
+            <a href="seeds.html" class="dropdown-item"><i class="fas fa-seedling"></i> 2. Seeds & Intent</a>
+            <a href="growth.html" class="dropdown-item"><i class="fas fa-leaf"></i> 3. Daily Growth</a>
+            <a href="seasons.html" class="dropdown-item"><i class="fas fa-calendar-alt"></i> 4. Life Seasons</a>
+            <a href="community.html" class="dropdown-item"><i class="fas fa-users"></i> 5. Mycorrhizal Tribe</a>
+            <a href="harvest.html" class="dropdown-item"><i class="fas fa-apple-alt"></i> 6. Golden Harvest</a>
+          </div>
+        </div>
+        <a href="testimonial.html" class="nav-link">Testimonials</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="call-to-action.html" class="btn-nav-cta"><i class="fas fa-seedling"></i> Begin Cultivation</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme"><i class="fas fa-sun"></i></button>
+        <button class="sound-toggle" id="soundToggle" aria-label="Toggle Sound"><i class="fas fa-volume-mute"></i></button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero Header -->
+  <section class="page-hero">
+    <img src="soil.jpg" alt="Rich Fertile Earth" class="page-hero-bg">
+    <div class="container page-hero-content anim-fade-up">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> <i class="fas fa-chevron-right" style="font-size: 0.65rem;"></i> <span>Pillar 1: Soil & Roots</span>
+      </div>
+      <span class="section-badge" style="border-color: #b27b46; color: #f5b041;"><i class="fas fa-mountain"></i> Pillar 01 / Subterranean Foundation</span>
+      <h1 class="page-hero-title">The Secret Life of <em>Soil & Roots</em></h1>
+      <p class="page-hero-lead">
+        What happens above ground in the canopy is merely a confession of what is occurring beneath the ground in the dark. 
+        Nurture your biology, detoxify your attention, and anchor your habits in bedrock.
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 1: The Four Strata of Life Soil -->
+  <section class="section">
+    <div class="container">
+      <div class="content-grid-2col">
+        <div>
+          <span class="section-badge"><i class="fas fa-layer-group"></i> Strata of Vitality</span>
+          <h2 class="section-title">The Four Strata of <em>Inner Soil</em></h2>
+          <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+            When an arborist inspects a sickly tree with yellowing leaves, they do not paint the leaves green. 
+            They dig into the root zone to analyze moisture, acidity, and nutrient porosity. 
+            Your life is governed by four distinct layers of soil:
+          </p>
+
+          <ul class="feature-list">
+            <li>
+              <i class="fas fa-bed"></i>
+              <div>
+                <strong style="color: var(--text-main);">1. The Biological Bedrock:</strong>
+                <p>Circadian harmony, non-negotiable sleep, clean hydration, and cellular movement. Without physical energy, all spiritual ambitions wither.</p>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-brain"></i>
+              <div>
+                <strong style="color: var(--text-main);">2. The Mental Humus:</strong>
+                <p>Your information diet. What you consume—rage-bait algorithms or timeless philosophy—becomes the topsoil of your subconscious mind.</p>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-heart"></i>
+              <div>
+                <strong style="color: var(--text-main);">3. The Emotional Microbiome:</strong>
+                <p>Unresolved grievances, chronic resentment, and people-pleasing poison the soil with acidity. Cultivate forgiveness and crystal-clear boundaries.</p>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-tint"></i>
+              <div>
+                <strong style="color: var(--text-main);">4. The Spiritual Groundwater:</strong>
+                <p>Quiet solitude, deep silence, and connection with an enduring purpose larger than your transient ego.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="media-rounded-card anim-fade-in">
+          <img src="soil.jpg" alt="Rich dark fertile soil in hands" style="min-height: 480px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Composting Grief, Failure & Mistakes -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-badge"><i class="fas fa-recycle"></i> The Alchemical Law</span>
+        <h2 class="section-title">The Art of <em>Psychological Composting</em></h2>
+        <p class="section-subtitle">
+          A bad farmer throws away rotting matter and curses animal waste. 
+          A master farmer gathers the rotten scraps, piles them in darkness, lets heat transform them, and creates the richest fertilizer on earth.
+        </p>
+      </div>
+
+      <div class="pillars-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="pillar-card">
+          <div class="pillar-icon-box"><i class="fas fa-trash-alt"></i></div>
+          <h3 style="margin-top: 1rem;">1. Do Not Deny the Waste</h3>
+          <p>Acknowledge your painful setbacks, failed ventures, broken romances, and regrets without denial. They are the organic biomass needed for regeneration.</p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-box"><i class="fas fa-fire-alt"></i></div>
+          <h3 style="margin-top: 1rem;">2. Allow the Heat of Reflection</h3>
+          <p>Compost requires microbial heat. Through honest journaling and therapy, extract the non-negotiable lesson from the wreckage of the blunder.</p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-box"><i class="fas fa-seedling"></i></div>
+          <h3 style="margin-top: 1rem;">3. Feed the Next Cycle</h3>
+          <p>Spread the dark, converted wisdom across your next venture. The greatest masters are simply people whose fields have been enriched by deep composting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Interactive Soil pH Assessment Quiz -->
+  <section class="section">
+    <div class="container" style="max-width: 860px;">
+      <div class="section-title-wrap">
+        <span class="section-badge"><i class="fas fa-vial"></i> Interactive Diagnostic</span>
+        <h2 class="section-title">Assess Your <em>Soil Health Score</em></h2>
+        <p class="section-subtitle">
+          Answer honestly across 5 key soil dimensions to determine if your inner ground is fertile, acidic, or depleted.
+        </p>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: var(--radius-xl); padding: 3rem; box-shadow: var(--shadow-card);">
+        <form id="soilQuizForm">
+          
+          <div class="form-group">
+            <label class="form-label">1. Sleep & Biological Restoration (Bedrock)</label>
+            <select name="q1" class="form-control" required>
+              <option value="4">Consistently 7.5–9 hours of deep, unmedicated sleep; wake refreshed.</option>
+              <option value="3">Mostly consistent sleep (6.5–7.5h), occasional late night disruptions.</option>
+              <option value="2">Irregular sleep schedule; frequent night awakenings; rely heavily on caffeine.</option>
+              <option value="1">Chronic sleep deprivation; running on adrenaline and late-night blue light.</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">2. Mental Humus & Information Diet</label>
+            <select name="q2" class="form-control" required>
+              <option value="4">Intentional media fasts, read long-form books, zero morning phone scrolling.</option>
+              <option value="3">Moderate awareness; check social feeds but protect focus hours.</option>
+              <option value="2">Frequent doomscrolling, fragmented attention, constant podcast background noise.</option>
+              <option value="1">High digital toxicity; glued to breaking news and social feeds until midnight.</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">3. Emotional Microbiome & Boundaries</label>
+            <select name="q3" class="form-control" required>
+              <option value="4">High psychological safety, forgive swiftly, speak honest boundaries with warmth.</option>
+              <option value="3">Good boundaries, occasional unspoken tension, manageable stress.</option>
+              <option value="2">Frequent people-pleasing, lingering resentment, difficulty saying 'no'.</option>
+              <option value="1">Raging conflict or swallowed anger; drained daily by emotional vampires.</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">4. Physical Movement & Hydration</label>
+            <select name="q4" class="form-control" required>
+              <option value="4">Daily nature walks, strength cultivation, clean hydration and nutrient-dense whole foods.</option>
+              <option value="3">Exercise 3-4 days a week, decent nutrition with some processed cheats.</option>
+              <option value="2">Sedentary desk posture for 10+ hours; irregular hydration.</option>
+              <option value="1">Almost zero movement; fast food and high refined sugar diets.</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">5. Spiritual Groundwater & Stillness</label>
+            <select name="q5" class="form-control" required>
+              <option value="4">Daily silent meditation, prayer, or walking meditation; profound grounded trust.</option>
+              <option value="3">Occasional periods of reflection, weekly pause or Sabbath.</option>
+              <option value="2">Rarely sit still in silence; feel uncomfortable without mental stimulation.</option>
+              <option value="1">Total existential vertigo; zero stillness, chronic panic about tomorrow.</option>
+            </select>
+          </div>
+
+          <div style="text-align: center; margin-top: 2rem;">
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; max-width: 420px;">
+              <i class="fas fa-microscope"></i> Calculate Soil pH Score
+            </button>
+          </div>
+        </form>
+
+        <div id="soilQuizResult" style="display: none;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Next Step Navigation -->
+  <section class="section" style="padding: 4rem 0; border-top: 1px solid var(--border-subtle);">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;">
+      <a href="about.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Previous: The Philosophy</a>
+      <div style="text-align: right;">
+        <div style="font-size: 0.85rem; color: var(--text-dim); text-transform: uppercase;">Next Life Pillar</div>
+        <a href="seeds.html" class="btn btn-gold btn-lg"><i class="fas fa-seedling"></i> Proceed to Pillar 2: Seeds of Intent <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-icon-wrap"><i class="fas fa-tree"></i></div>
+            <div class="brand-text">Farmer<span>OfLife</span></div>
+          </a>
+          <p>An existential sanctuary honoring natural cycles, timeless wisdom, and organic human growth.</p>
+          <div class="social-links" style="display: flex; gap: 0.75rem; margin-top: 1rem;">
+            <a href="https://t.me/kimbunthonICT" target="_blank" rel="noopener noreferrer" class="social-link" title="Telegram (@kimbunthonICT)" aria-label="Telegram" style="background: rgba(2, 132, 199, 0.2); color: #38bdf8; border-color: rgba(2, 132, 199, 0.45);"><i class="fab fa-telegram-plane"></i></a>
+            <a href="#" class="social-link" title="Forest Podcast" aria-label="Podcast"><i class="fas fa-podcast"></i></a>
+            <a href="#" class="social-link" title="Community Forum" aria-label="Community"><i class="fas fa-seedling"></i></a>
+            <a href="contact.html" class="social-link" title="Contact Us" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Life Pillars</h4>
+          <div class="footer-links">
+            <a href="soil.html" class="active">1. Soil & Roots</a>
+            <a href="seeds.html">2. Seeds of Intent</a>
+            <a href="growth.html">3. Daily Growth</a>
+            <a href="seasons.html">4. Life Seasons</a>
+            <a href="community.html">5. Community</a>
+            <a href="harvest.html">6. Golden Harvest</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Sanctuary</h4>
+          <div class="footer-links">
+            <a href="about.html">The Philosophy</a>
+            <a href="testimonial.html">Cultivator Stories</a>
+            <a href="contact.html">Send Word</a>
+            <a href="call-to-action.html">The Covenant</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Cultivator Action</h4>
+          <a href="call-to-action.html" class="btn btn-gold btn-sm"><i class="fas fa-scroll"></i> Get Starter Pack</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Farmer of Life Sanctuary. All rights reserved.</div>
+        <a href="#siteHeader">Back to Top <i class="fas fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <!-- Floating Sanctuary Audio & Canopy HUD -->
+  <div class="sanctuary-hud" id="sanctuaryHUD" role="region" aria-label="Sanctuary Ambience Controls">
+    <button class="hud-sound-btn" id="hudSoundBtn" title="Toggle Forest Wind Ambience">
+      <div class="hud-equalizer" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <span class="hud-sound-text">Forest Sound</span>
+    </button>
+    <button class="hud-scroll-top" id="hudScrollTop" title="Return to Canopy" aria-label="Return to Canopy">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </div>
+</body>
+</html>
